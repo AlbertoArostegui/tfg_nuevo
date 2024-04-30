@@ -1,0 +1,315 @@
+affectedVersion: Find issues with an AffectedVersion of 3.14:affectedVersion = "3.14"  Note that full-stops are reserved characters and need to be surrounded by quote-marks.Find issues with an AffectedVersion of "Big Ted":affectedVersion = "Big Ted"Find issues with an AffectedVersion ID of 10350:affectedVersion = 10350
+
+approvals: Find requests that require or required approval by John Smith:approval = approver(jsmith)Find requests that require approval by John Smith:approval = pendingBy(jsmith)Find requests that require or have required approval by the current user:approval = myPending()Find all requests that require approval:approval = pending()
+
+assignee: Find issues that are assigned to John Smith:assignee = "John Smith"orassignee = jsmithFind issues that are currently assigned, or were previously assigned, to John Smith:assignee WAS jsmithFind issues that are assigned by the user with email address bob@mycompany.com:assignee = "bob@mycompany.com"Note that full-stops and "@" symbols are reserved characters and need to be surrounded by quote-marks.
+
+attachments: Search for issues that have attachments:attachments IS NOT EMPTY  Search for issues that do not have attachments:attachments IS EMPTY 
+
+category: Find issues that belong to projects in the "Alphabet Projects" Category:category = "Alphabet Projects"
+
+change-gating-type: Find requests where the gating type is empty:change-gating-type is EMPTYFind requests where the gating type is tracked-only:change-gating-type = "tracked-only"
+
+comment: Find issues where a comment contains the words "My PC is quite old":comment ~ "\"My PC is quite old"
+
+component: Find issues in the "Comp1" or "Comp2" component:component in (Comp1, Comp2)Find issues in the "Comp1" and"Comp2" components:component in (Comp1) and component in (Comp2)orcomponent = Comp1 and component = Comp2 Find issues in the component with ID 20500:component = 20500 
+
+created: Find all issues created before 12th December 2010:created < "2010/12/12"Find all issues created on or before 12th December 2010:created <= "2010/12/13"Find all issues created on 12th December 2010 before 2:00pm:created > "2010/12/12" and created < "2010/12/12 14:00" Find issues created less than one day ago:created > "-1d"Find issues created in January 2011:created > "2011/01/01" and created < "2011/02/01"Find issues created on 15 January 2011:created > "2011/01/15" and created < "2011/01/16"
+
+creator: Search for issues that were created by Jill Jones:creator = "Jill Jones"orcreator = "jjones"Search for issues that were created by the user with email address :creator = "bob@mycompany.com"(Note that full-stops and "@" symbols are reserved characters, so the email address needs to be surrounded by quote-marks.) 
+
+CustomFieldName: Find issues where the value of the "Location" custom field is "New York":location = "New York"Find issues where the value of the custom field with ID 10003 is "New York":cf[10003] = "New York"Find issues where the value of the "Location" custom field is "London" or "Milan" or "Paris":cf[10003] in ("London", "Milan", "Paris")Find issues where the "Location" custom field has no value:location != empty
+
+description: Find issues where the description contains the words "Please see screenshot":description ~ "Please see screenshot"
+
+due: Find all issues due before 31st December 2010:due < "2010/12/31"Find all issues due on or before 31st December 2010:due <= "2011/01/01"Find all issues due tomorrow:due = "1d"Find all issues due in January 2011:due >= "2011/01/01" and due <= "2011/01/31"Find all issues due on 15 January 2011:due = "2011/01/15"
+
+environment: Find issues where the environment contains the words "Third floor":environment ~ "Third floor"
+
+filter: Search the results of the filter "My Saved Filter" (which has an ID of 12000) for issues assigned to the user jsmith:filter = "My Saved Filter" and assignee = jsmithorfilter = 12000 and assignee = jsmith
+
+fixVersion: Find issues with a Fix Version of 3.14 or 4.2:fixVersion in ("3.14", "4.2")(Note that full-stops are reserved characters, so they need to be surrounded by quote-marks.)Find issues with a Fix Version of "Little Ted":fixVersion = "Little Ted"Find issues with a Fix Version ID of 10001:fixVersion = 10001
+
+hierarchyLevel: Find issues at the story level: hierarchyLevel = "0"Find issues higher than the subtask level: hierarchyLevel > -1
+
+issueKey: Find the issue with key "ABC-123":issueKey = ABC-123
+
+issueLink, issueLink["link type"], or issueLinkType, where link type or LinkType is a variable you replace with the issue link type (blocks, duplicates, or is blocked by, for example).: Find issues:with a link of any type to the issue ABC-123: issueLink = ABC-123with linked issues but not linked to a specific issue: issueLink != ABC-123linked to at least one of a list of issues: issueLink in (ABC-123, ABC-456)with linked issues but not linked to any of the issues you specify: issueLink not in (ABC-123, ABC-456)that block the issue ABC-123 (link type is "blocks"): issueBlocks = ABC-123 or issueLink["blocks"] = ABC-123that are blocked by the issue ABC-123 (link type is "is blocked by"): issueIsBlockedBy = ABC-123 or issueLink["is blocked by"] = ABC-123
+
+issueLinkType: Find issues:with a link type of "causes": issueLinkType = causeswith a link type of "duplicates" or "clones": issueLinkType in (duplicates,clones)with link types other than “clones”: issueLinkType != clonesthat are blocked by other issues, or that don't have any blockers:issueLinkType = "is blocked by"issueLinkType != "is blocked by"
+
+labels: Find issues with an existing label:labels = "x"Find issues without a specified label, including issues without a label:labels not in ("x") or labels is EMPTY
+
+lastViewed: Find all issues last viewed before 12th December 2010:lastViewed < "2010/12/12"Find all issues last viewed on or before 12th December 2010:lastViewed <= "2010/12/13"Find all issues last viewed on 12th December 2010 before 2:00pm:lastViewed > "2010/12/12" and created < "2010/12/12 14:00"Find issues last viewed less than one day ago:lastViewed > "-1d"Find issues last viewed in January 2011:lastViewed > "2011/01/01" and created < "2011/02/01"Find issues last viewed on 15 January 2011:lastViewed > "2011/01/15" and created < "2011/01/16"
+
+level: Search for issues with a security level of "Really High" or "level1":level in ("Really High", level1)Search for issues with a security level ID of 123:level = 123
+
+organizations: Search for all requests shared with the organization Atlassian:1
+organizations = "Atlassian"
+
+originalEstimate: Find issues with an original estimate of 1 hour:originalEstimate = 1hFind issues with an original estimate of more than 2 days:originalEstimate > 2d
+
+parent: Find issues that are child issues of issue TEST-1234:parent = TEST-1234
+
+priority: Find issues with a priority of "High":priority = HighFind issues with a priority ID of 10000:priority = 10000
+
+project: Find issues that belong to the Project that has the name "ABC Project":project = "ABC Project"Find issues that belong to the project that has the key "ABC":project = "ABC"Find issues that belong to the project that has the ID "1234":project = 1234
+
+projectType: Find all issues in a software project:projectType = ”software”Find all issues in either a software project or a service project:projectType = ”software” OR projectType = ”service_desk”Find all issues that aren’t in a software project:projectType != ”software”
+
+remainingEstimate: Find issues with a remaining estimate of more than 4 hours:remainingEstimate > 4h
+
+reporter: Search for issues that were reported by Jill Jones:reporter = "Jill Jones"orreporter = jjonesSearch for issues that were reported by the user with email address bob@mycompany.com:reporter = "bob@mycompany.com"(Note that full-stops and "@" symbols are reserved characters, so the email address needs to be surrounded by quote-marks.)
+
+request-channel-type: Find requests where the request channel was email:request-channel-type = emailFind requests where the request channel was something other than a service project portal:request-channel-type != portalFind requests where the request channel was sent by a CI/CD deployment tool:request-channel-type = deployment
+
+request-last-activity-time: Find all issues last acted on before 23rd May 2016:request-last-activity-time < "2016/05/23"Find all issues last acted on or before 23rd May 2016:request-last-activity-time <= "2016/05/23"Find all issues created on 23rd May 2016 and last acted on before 2:00pm that day:created > "2016/05/23" AND request-last-activity-time < "2016/05/23 14:00" Find issues last acted on less than one day ago:request-last-activity-time > "-1d"Find issues last acted on in January 2016:request-last-activity-time > "2016/01/01" and request-last-activity-time < "2016/02/01"
+
+"Request Type": Find issues where Request Type is Request a new account in projects that the user has access to:"Request Type" = "Request a new account"Find issues where the Request Type is Request a new account in SimpleDesk project, where the right operand is a selected Lucene value from the auto-complete suggestion list."Request Type" = "sd/system-access"Find issues where Request Type is either Request a new account or Get IT Help. "Request Type" IN ("Request a new account", "Get IT Help")
+
+resolution: Find issues with a resolution of "Cannot Reproduce" or "Won't Fix":resolution in ("Cannot Reproduce", "Won't Fix")Find issues with a resolution ID of 5:resolution = 5Find issues that do not have a resolution:resolution = unresolved
+
+resolved: Find all issues that were resolved before 31st December 2010:resolved < "2010/12/31"Find all issues that were resolved before 2.00pm on 31st December 2010:resolved < "2010/12/31 14:00"Find all issues that were resolved on or before 31st December 2010:resolved <= "2011/01/01"Find issues that were resolved in January 2011:resolved > "2011/01/01" and resolved < "2011/02/01"Find issues that were resolved on 15 January 2011:resolved > "2011/01/15" and resolved < "2011/01/16"Find issues that were resolved in the last hour:resolved > -1h
+
+Time to resolution: Find issues where Time to First Response was breached:"Time to First Response" = everBreached()Find issues where the SLA for Time to Resolution is paused due to a condition:"Time to Resolution" = paused()Find issues where the SLA for Time to Resolution is paused due to the SLA calendar:"Time to Resolution" = withinCalendarHours()Find issues that have been waiting for a response for more than 1 hour:"Time to First Response" > elapsed("1h")Find issues that that will breach Time to First Response in the next two hours:"Time to First Response" < remaining("2h")
+
+sprint: Find issues that belong to sprint 999:sprint = 999Find issues that belong to sprint "February 1":sprint = "February 1"Find issues that belong to either "February 1", "February 2" or "February 3":sprint in ("February 1","February 2","February 3")Find issues that are assigned to a sprint:sprint is not empty
+
+status: Find issues with a status of "Open":status = OpenFind issues with a status ID of 1:status = 1Find issues that currently have, or previously had, a status of "Open":status WAS Open
+
+summary: Find issues where the summary contains the words "Error saving file":summary ~ "Error saving file"
+
+text: Find issues where a text field contains the word "Fred":text ~ "Fred"ortext ~ FredFind all issues where a text field contains the words "full screen":text ~ "full screen"
+
+timeSpent: Find issues where the time spent is more than 5 days:timeSpent > 5d
+
+type: Find issues with an issue type of "Bug":type = BugFind issues with an issue typeof "Bug" or "Improvement":issueType in (Bug,Improvement)Find issues with an issue type ID of 2:issueType = 2
+
+updated: Find issues that were last updated before 12th December 2010:updated < "2010/12/12"Find issues that were last updated on or before 12th December 2010:updated < "2010/12/13"Find all issues that were last updated before 2.00pm on 31st December 2010:updated < "2010/12/31 14:00"Find issues that were last updated more than two weeks ago:updated < "-2w"Find issues that were last updated on 15 January 2011:updated > "2011/01/15" and updated < "2011/01/16"Find issues that were last updated in January 2011:updated > "20011/01/01" and updated < "2011/02/01"
+
+voter: Search for issues that you have voted for:voter = currentUser()Search for issues that the user "jsmith" has voted for:voter = "jsmith"Search for issues for which a member of the group "jira-administrators" has voted:voter in membersOf("jira-administrators")
+
+votes: Find all issues that have 12 or more votes:votes >= 12
+
+watcher: Search for issues that you are watching:watcher = currentUser()Search for issues that the user "jsmith" is watching:watcher = "jsmith"Search for issues that are being watched by a member of the group "jira-administrators":watcher in membersOf("jira-administrators")
+
+watchers: Find all issues that are being watched by more than 3 people:watchers > 3
+
+worklogComment: Find issues where a worklog comment contains the word "Fred":worklogComment ~ "Fred"Find all issues where a worklog comment contains the words "full screen":worklogComment ~ "full screen"
+
+worklogDate: Find issues where someone logged work on 12th December 2010:worklogDate = "2010/12/12"Find the issues where someone has logged work in the past week:worklogDate > startOfWeek()
+
+workRatio: Find issues on which more than 75% of the original estimate has been spent:workRatio > 75
+
+approved(): Find all requests that have been approved:approvals = approved()
+
+approver(user,user): Find requests that require or required approval by John Smith:approvals = approver(jsmith)Find requests that require or required approval by John Smith or Sarah Khan: approvals = approver(jsmith,skhan)
+
+breached(): Find issues where Time to First Response was breached:"Time to First Response" = breached()
+
+cascadeOption(parentOption)
+cascadeOption(parentOption,childOption): Find issues where a custom field ("Location") has the value "USA" for the first tier and "New York" for the second tier:location in cascadeOption("USA","New York")Find issues where a custom field ("Location") has the value "USA" for the first tier and any value (or no value) for the second tier:location in cascadeOption( "USA" )Find issues where a custom field ("Location") has the value "USA" for the first tier and no value for the second tier:location in cascadeOption( "USA" ,none)Find issues where a custom field ("Location") has no value for the first tier and no value for the second tier:location in cascadeOption(none)Find issues where a custom field ("Referrer") has the value "none" for the first tier and "none" for the second tier:referrer in cascadeOption( "\"none\"" , "\"none\"" )Find issues where a custom field ("Referrer") has the value "none" for the first tier and no value for the second tier:referrer in cascadeOption( "\"none\"" ,none)
+
+closedSprints(): Find all issues that are assigned to a completed sprint:sprint in closedSprints()
+
+completed(): Find issues where Time to First Response has completed at least one cycle:"Time to First Response" = completed()
+
+componentsLeadByUser()
+componentsLeadByUser(username): Find open issues in components that are led by you:component in componentsLeadByUser() AND status = OpenFind open issues in components that are led by Bill:component in componentsLeadByUser(bill) AND status = Open
+
+currentLogin(): Find issues that have been created during my current session:created > currentLogin()
+
+currentUser(): Find issues that are assigned to me:assignee = currentUser()Find issues that were reported to me but are not assigned to me:1
+reporter = currentUser() AND (assignee != currentUser() OR assignee is EMPTY)
+
+customerDetail( ): Create a queue for all requests reported by customers in the APAC region:reporter in customerDetail("Region", "APAC")Create a queue for all requests reported by customers who are not technical contactsreporter not in customerDetail("Role", "Technical Contact")
+
+earliestUnreleasedVersion(project): Find issues whose FixVersion is the earliest unreleased version of the ABC project:fixVersion = earliestUnreleasedVersion(ABC)Find issues that relate to the earlist unreleased version of the ABC project:affectedVersion = earliestUnreleasedVersion(ABC) or fixVersion = earliestUnreleasedVersion(ABC)
+
+elapsed(): Find issues that have been waiting for a first response for more than 1 hour:"Time to First Response" > elapsed("1h")
+
+endOfDay()
+endOfDay("inc"): Find issues due by the end of today:due < endOfDay()Find issues due by the end of tomorrow:due < endOfDay("+1")
+
+endOfMonth()
+endOfMonth("inc"): Find issues due by the end of this month:due < endOfMonth()Find issues due by the end of next month:due < endOfMonth("+1")Find issues due by the 15th of next month:due < endOfMonth("+15d")
+
+endOfWeek()
+endOfWeek("inc"): Find issues due by the last day of the end of this week (by default, the last day is Saturday):due < endOfWeek()Find issues due by the end of this week (last day as Sunday):due < endOfWeek("+1d")Find issues due by the end of next week:due < endOfWeek("+1")
+
+endOfYear()
+endOfYear("inc"): Find issues due by the end of this year:due < endOfYear()Find issues due by the end of March next year:due < endOfYear("+3M")
+
+elapsed(): Find issues have missed their goal for Time to First Response:"Time to First Response" = everbreached()
+
+futureSprints(): Find all issues that are assigned to a sprint that hasn't been started yet:sprint in futureSprints()
+
+issueHistory(): Find issues which I have recently viewed, that are assigned to me:issue in issueHistory() AND assignee = currentUser()
+
+issuesWithRemoteLinksByGlobalId(): Find issues that are linked to remote links that have globalId "abc":issue in issuesWithRemoteLinksByGlobalId(abc)Find issues that are linked to remote links that have either globalId "abc" or "def":issue in issuesWithRemoteLinksByGlobalId(abc, def)
+
+lastLogin(): Find issues that have been created during my last session:created > lastLogin()
+
+latestReleasedVersion(project): Find issues whose FixVersion is the latest released version of the ABC project:fixVersion = latestReleasedVersion(ABC)Find issues that relate to the latest released version of the ABC project:affectedVersion = latestReleasedVersion(ABC) or fixVersion = latestReleasedVersion(ABC)
+
+linkedissue = issueKey: Find subtasks that are linked to a particular epic:1
+linkedissue = epicKey-123
+
+linkedIssues(issueKey)
+linkedIssues(issueKey,CaseSensitiveLinkType)
+linkedIssues(issueKey,CaseSensitiveLinkType, CaseSensitiveLinkType): Find issues that are linked to a particular issue:issue in linkedIssues(ABC-123)Find issues that are linked to a particular issue via a particular type of link:issue in linkedIssues(ABC-123,"is duplicated by")Find issues that are linked to a particular issue via any type of link specified: issue in linkedIssues(ABC-123,"is duplicated by", "is blocked by")
+
+membersOf(Group): Find issues where the Assignee is a member of the group "jira-administrators":assignee in membersOf("jira-administrators")Search through multiple groups and a specific user:reporter in membersOf("jira-administators") or reporter in membersOf("jira-work-management-users") or reporter=jsmithSearch for a particular group, but exclude a particular member or members:assignee in membersOf(QA) and assignee not in ("John Smith","Jill Jones")Exclude members of a particular group:assignee not in membersOf(QA)
+
+myApproval(): Find all requests that required my approvalapproval = myApproval()
+
+myPendingApproval(): Find all requests that currently require my approvalapprovals = myPending()
+
+myPending(): Find all requests that currently or previously required my approvalapprovals = myPending()
+
+now(): Find issues that are overdue:duedate < now() and status not in (closed, resolved)
+
+openSprints(): Find all issues that are assigned to a sprint that has not yet been completed:sprint in openSprints()
+
+organizationDetail(): Create a queue for all requests shared with organizations in the APAC region:organizations in organizationDetail("Region", "APAC")Create a queue for all requests shared with organizations that are not in a platinum support levelorganizations not in organizationDetail("Support level", "Platinum")Create a queue for all unresolved requests shared with organizations that joined on 2023-08-24 where the date is in YYYY-MM-DD format: resolution = Unresolved AND Organizations in organizationDetail("Joined on", "2023-08-24")Consider a multi-select dropdown that can contain up to two values (option1 and option2 ). To create a queue for all the organizations where both values are present:resolution = Unresolved AND Organizations in organizationDetail("Options", "option1") AND Organizations in organizationDetail("Options", "option2")
+
+organizationMembers(): Find all requests sent by members of the organization Atlassian:reporter in organizationMembers("Atlassian")Find requests sent by people who are not in the organizations Atlassian or ACME:reporter not in organizationMembers("Atlassian","ACME")
+
+parentEpic(): Find issues and sub-tasks in the epic DEMO-123:parentEpic = DEMO 123Find issues and sub-tasks the epic DEMO-1 or SAMPLE-4:parentEpic in (DEMO-1, SAMPLE-4)
+
+paused(): Find issues where Time to First Response is paused:"Time to First Response" = paused()
+
+pending(): Find all requests that require approval:approvals = pending()
+
+pendingBy(user1,user2): Find requests that require approval by John Smith: approvals = pendingBy(jsmith)Find requests that require by John Smith or Sarah Khan: approvals = pendingBy(jsmith,skhan)
+
+projectsLeadByUser()
+projectsLeadByUser(username): Find open issues in projects that are led by you:project in projectsLeadByUser() AND status = OpenFind open issues in projects that are led by Bill:project in projectsLeadByUser(bill) AND status = Open
+
+projectsWhereUserHasPermission(permission): Find open issues in projects where you have the "Resolve Issues" permission:project in projectsWhereUserHasPermission("Resolve Issues") AND status = Open
+
+projectsWhereUserHasRole(rolename): Find open issues in projects where you have the "Developers" role:project in projectsWhereUserHasRole("Developers") AND status = Open
+
+releasedVersions()
+releasedVersions(project): Find issues whose FixVersion is a released version of the ABC project:fixVersion in releasedVersions(ABC)Find issues that relate to released versions of the ABC project:(affectedVersion in releasedVersions(ABC)) or (fixVersion in releasedVersions(ABC))
+
+remaining(): Find issues that will breach Time to Resolution in the next two hours:"Time to Resolution" < remaining("2h")
+
+running(): Find issues where Time to First Response is running:"Time to First Response" = running()
+
+standardIssueTypes(): Find issues that are not subtasks (i.e. issues whose Issue Type is a standard issue type, not a subtask issue type):issuetype in standardIssueTypes()
+
+startOfDay()
+startOfDay("inc"): Find new issues created since the start of today:created > startOfDay()Find new issues created since the start of yesterday:created > startOfDay("-1")Find new issues created in the last three days:created > startOfDay("-3d")
+
+startOfMonth()
+startOfMonth("inc"): Find new issues created since the start of this month:created > startOfMonth()Find new issues created since the start of last month:created > startOfMonth("-1")Find new issues created since the 15th of this month:created > startOfMonth("+14d")
+
+startOfWeek()
+startOfWeek("inc"): Find new issues since the first day of the start of this week (by default, the first day is Sunday):created > startOfWeek()Find new issues since the first day of the start of this week (first day as Monday):created > startOfWeek("+1d")Find new issues since the start of last week:created > startOfWeek("-1")
+
+startOfYear()
+startOfYear("inc"): Find new issues since the start of this year:created > startOfYear()Find new issues since the start of last year:created > startOfYear("-1")
+
+subtaskIssueTypes(): Find issues that are subtasks (i.e. issues whose Issue Type is a subtask issue type):issuetype in subtaskIssueTypes()
+
+unreleasedVersions()
+unreleasedVersions(project): Find issues whose FixVersion is an unreleased version of the ABC project:fixVersion in unreleasedVersions(ABC)Find issues that relate to unreleased versions of the ABC project:affectedVersion in unreleasedVersions(ABC)
+
+updatedBy(user)
+updatedBy(user, dateFrom)
+updatedBy(user, dateFrom, dateTo): Find issues that were updated by John Smith:issuekey IN updatedBy(jsmith)Find issues that were updated by John Smith within the last 8 days:issuekey IN updatedBy(jsmith, "-8d")Find issues updated between June and September 2018:issuekey IN updatedBy(jsmith, "2018/06/01", "2018/08/31")If you try to find issues updated in the last hour, like in the following example, the time will be rounded up to 1 day, as smaller values aren't supported:issuekey IN updatedBy(jsmith, "-1h")
+
+votedIssues(): Find issues that you have voted for:issue in votedIssues()
+
+watchedIssues(): Find issues that you are watching:issue in watchedIssues()
+
+withinCalendarHours(): Find issues where Time to First Response is within calendar hours:"Time to First Response" = withinCalendarHours()
+
+Equals (=): 
+reporter = "John Smith"
+reporter = "abcde-12345-fedcba"
+
+Not equals (!=) : 
+not assignee = abcde-12345-fedcba
+assignee != abcde-12345-fedcba
+assignee != abcde-12345-fedcba or assignee is empty
+reporter = currentUser() and assignee != currentUser()
+assignee != "John Smith" or reporter != "John Smith"
+assignee != "John Smith" or reporter != "John Smith"
+assignee is not empty
+assignee != null
+
+Greater than (>): 
+votes > 4
+duedate < now() and resolution is empty
+priority > normal
+
+Greater than equals (>=): 
+votes >= 4
+duedate >= "2008/12/31"
+created >= "-5d"
+
+Less than (<) : 
+votes < 4
+
+Less than equals (<=): 
+votes <= 4
+updated <= "-4w 2d"
+
+IN: 
+reporter in (jsmith,jbrown,jjones)
+reporter in (abcde-12345-fedcba,fedcb-12345-edcba,cdefb-67895-cbaed)
+reporter in (Jack,Jill) or assignee in (Jack,Jill)
+reporter in (abcde-12345-fedcba,cdefb-67895-cbaed) or assignee in (abcde-12345-fedcba,cdefb-67895-cbaed)
+affectedVersion in ("3.14", "4.2")
+
+NOT IN: 
+assignee not in (Jack,Jill,John)
+assignee not in (abcde-12345-fedcba,fedcb-12345-edcba,cdefb-67895-cbaed)
+assignee not in (Jack,Jill,John) or assignee is empty
+assignee not in (abcde-12345-fedcba,fedcb-12345-edcba,cdefb-67895-cbaed) or assignee is empty
+FixVersion not in (A, B, C, D)
+FixVersion not in (A, B, C, D) or FixVersion is empty
+
+CONTAINS (~): 
+summary ~ win
+summary ~ "win*"
+summary ~ "issue collector"
+summary ~ "\"full screen\""
+
+DOES NOT CONTAIN (!~): 
+summary !~ run
+
+IS: 
+fixVersion is empty
+fixVersion is null
+
+IS NOT: 
+votes is not empty
+votes is not null
+
+WAS: 
+status WAS "In Progress"
+status WAS "Resolved" BY jsmith BEFORE "2019/02/02"
+status WAS "Resolved" BY abcde-12345-fedcba BEFORE "2019/02/02"
+status WAS "Resolved" BY jsmith DURING ("2010/01/01","2011/01/01")
+status WAS "Resolved" BY abcde-12345-fedcba DURING ("2010/01/01","2011/01/01")
+status WAS "Resolved" BY (jsmith,srogen) DURING ("2019/01/01","2020/01/01")
+
+WAS IN: 
+status WAS IN ("Resolved","In Progress")
+
+WAS NOT IN: 
+status WAS NOT IN ("Resolved","In Progress")
+status WAS NOT IN ("Resolved","In Progress") BEFORE "2011/02/02"
+
+WAS NOT: 
+status WAS NOT "In Progress"
+status WAS NOT "In Progress" BEFORE "2011/02/02"
+
+CHANGED: 
+assignee CHANGED
+status CHANGED FROM "In Progress" TO "Open"
+priority CHANGED BY freddo BEFORE endOfWeek() AFTER startOfWeek()
+
