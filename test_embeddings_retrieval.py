@@ -14,6 +14,6 @@ retriever = RedundantFilterRetriever(
     chroma = db
 )
 
-relevant_documents = retriever.invoke('Which issues where closed during August 2023?')
+relevant_documents = retriever.get_relevant_documents('Show issues in progress on GPT4')
 for doc in relevant_documents:
     print(doc.page_content + '\n\n')
