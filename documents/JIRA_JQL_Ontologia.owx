@@ -1,0 +1,1373 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Prefix name="" IRI="http://vocab.lksnext.com"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>This Ontology defines JIRA project concepts</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal>JIRA project Ontology</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/Project"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Abierto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Bug"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Cerrado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Developer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Documentation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/EnProgreso"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Entregado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Epic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/High"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Highest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Low"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Lowest"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Manager"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Medium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Priority"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Reabierto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Resuelto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Subtask"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Task"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Validado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="https://schema.org/Person"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignedTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/documentation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/hasIssue"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/informer"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/partOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/priority"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/project"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/status"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/createdOn"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/documentation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/hasDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/hasEndDate"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/hasName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/TODO"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+            <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Abierto"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Bug"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Cerrado"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Developer"/>
+        <Class IRI="https://schema.org/Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/EnProgreso"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Entregado"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Epic"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/High"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Priority"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Highest"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Priority"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/project"/>
+            <Class IRI="http://vocab.lksnext.com/Project"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/documentation"/>
+            <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Documentation"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Low"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Priority"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Lowest"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Priority"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Manager"/>
+        <Class IRI="https://schema.org/Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Medium"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Priority"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Reabierto"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Resuelto"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Task"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Validado"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="http://vocab.lksnext.com/Project"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Documentation"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Priority"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Subtask"/>
+        <Class IRI="https://schema.org/Person"/>
+    </DisjointClasses>
+    <DisjointUnion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Abierto"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Cerrado"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/EnProgreso"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Entregado"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Reabierto"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Resuelto"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Validado"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Priority"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/High"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Highest"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Low"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Lowest"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Medium"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="https://schema.org/Person"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Developer"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Manager"/>
+    </DisjointUnion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+    </ClassAssertion>
+    <DifferentIndividuals/>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+    </ObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+    </NegativeObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <NamedIndividual IRI="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+    </NegativeObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/hasIssue"/>
+        <ObjectProperty IRI="topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/project"/>
+        <ObjectProperty IRI="topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignedTo"/>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/hasIssue"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/informer"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignedTo"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/documentation"/>
+        <ObjectUnionOf>
+            <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Documentation"/>
+            <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/hasIssue"/>
+        <Class IRI="https://schema.org/Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/informer"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/partOf"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Subtask"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/priority"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/project"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/status"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/assignedTo"/>
+        <Class IRI="https://schema.org/Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/documentation"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Documentation"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/hasIssue"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/informer"/>
+        <Class IRI="https://schema.org/Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/partOf"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Task"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/priority"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Priority"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/project"/>
+        <Class IRI="http://vocab.lksnext.com/Project"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/status"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/createdOn"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/hasDescription"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/hasEndDate"/>
+        <Class IRI="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/hasName"/>
+        <Class IRI="https://schema.org/Person"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/createdOn"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/documentation"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/documentation"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/hasEndDate"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://vocab.lksnext.com/vocab.lksnext.com/hasName"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/EnProgreso</IRI>
+        <Literal>En Progreso</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/Estado</IRI>
+        <Literal>Status</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/Priority</IRI>
+        <Literal>Priority</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/assignee</IRI>
+        <Literal>Search for issues that are assigned to a particular user. You can search by the user&apos;s full name, ID, or email address.
+EXAMPLES:
+Find issues that are assigned to John Smith:
+assignee = &quot;John Smith&quot;or
+assignee = jsmith
+Find issues that are currently assigned, or were previously assigned, to John Smith:
+assignee WAS jsmith
+Find issues that are assigned by the user with email address bob@mycompany.com:
+assignee = &quot;bob@mycompany.com&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/assignee</IRI>
+        <Literal>assignee</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/attachments</IRI>
+        <Literal>Search for issues that have or do not have attachments. 
+EXAMPLES:
+Search for issues that have attachments:
+attachments IS NOT EMPTY  
+Search for issues that do not have attachments:
+attachments IS EMPTY</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/attachments</IRI>
+        <Literal>attachments</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/changed</IRI>
+        <Literal>Used to find issues that have a value that had changed for the specified field.
+This operator has the following optional predicates:
+EXAMPLES:
+status CHANGED FROM &lt;status&gt; TO &lt;status&gt;
+status CHANGED TO &lt;status&gt; DURING (&quot;2024/01/01&quot;, &quot;2024/01/31&quot;)
+status CHANGED DURING (&quot;2023/01/01&quot;, &quot;2023/02/25&quot;)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/changed</IRI>
+        <Literal>CHANGED</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/comment</IRI>
+        <Literal>Search for issues that have a comment that contains particular text using Jira text-search syntax.
+EXAMPLES:
+Find issues where a comment contains the words &quot;My PC is quite old&quot;:
+comment ~ &quot;\&quot;My PC is quite old&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/comment</IRI>
+        <Literal>comment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/contains</IRI>
+        <Literal>Used to search for issues where the value of the specified field matches the specified value (either an exact match or a &quot;fuzzy&quot; match — see examples below). For use with text fields only, i.e.:
+Summary
+Description
+Environment
+Comments</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/contains</IRI>
+        <Literal>~</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/customFieldName</IRI>
+        <Literal>Search for issues where a particular custom field has a particular value. You can search by custom field name or custom field ID (i.e. the number that Jira automatically allocates to a custom field).
+
+Note, it is safer to search by custom field ID than by custom field name. It is possible for a custom field to have the same name as a built-in Jira system field; in which case, Jira will search for the system field (not your custom field). It is also possible for your Jira administrator to change the name of a custom field, which could break any saved filters that rely on that name. Custom field IDs, however, are unique and cannot be changed.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/customFieldName</IRI>
+        <Literal>customFieldName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain</IRI>
+        <Literal>Used to search for issues where the value of the specified field is not a &quot;fuzzy&quot; match for the specified value. For use with text fields only, i.e.:
+Summary
+Description
+Environment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain</IRI>
+        <Literal>!~</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/due</IRI>
+        <Literal>Search for issues that were due on, before, or after a particular date (or date range). Note that the due date relates to the date only (not to the time).
+&quot;yyyy/MM/dd&quot;
+&quot;yyyy-MM-dd&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/due</IRI>
+        <Literal>due</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/equals</IRI>
+        <Literal>Used to search for issues where the value of the specified field exactly matches the specified value. (Note: cannot be used with text fields; see the CONTAINS operator instead.)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/equals</IRI>
+        <Literal>=</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/greaterThan</IRI>
+        <Literal>Used to search for issues where the value of the specified field is greater than the specified value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/greaterThan</IRI>
+        <Literal>&gt;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals</IRI>
+        <Literal>Used to search for issues where the value of the specified field is greater than or equal to the specified value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals</IRI>
+        <Literal>&gt;=</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/in</IRI>
+        <Literal>Ued to search for issues where the value of the specified field is one of multiple specified values. The values are specified as a comma-delimited list, surrounded by parentheses.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/in</IRI>
+        <Literal>IN</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/is</IRI>
+        <Literal>It can only be used with EMPTY or NULL. That is, it is used to search for issues where the specified field has no value.
+Examples:
+fixVersion is empty
+fixVersion is null</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/is</IRI>
+        <Literal>IS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/isNot</IRI>
+        <Literal>It can only be used with EMPTY or NULL. That is, it is used to search for issues where the specified field has a value.
+Examples:
+votes is not empty
+votes is not null</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/isNot</IRI>
+        <Literal>IS NOT</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/labels</IRI>
+        <Literal>Search for issues tagged with a label or list of labels. You can also search for issues without any labels to easily identify which issues need to be tagged so they show up in the relevant sprints, queues or reports.
+EXAMPLES:
+Find issues with an existing label:
+labels = &quot;x&quot;
+Find issues without a specified label, including issues without a label:
+labels not in (&quot;x&quot;) or labels is EMPTY</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/labels</IRI>
+        <Literal>labels</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/lessThan</IRI>
+        <Literal>Used to search for issues where the value of the specified field is less than the specified value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/lessThan</IRI>
+        <Literal>&lt;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals</IRI>
+        <Literal>Used to search for issues where the value of the specified field is less than or equal to than the specified value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals</IRI>
+        <Literal>&lt;=</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/notEquals</IRI>
+        <Literal>Used to search for issues where the value of the specified field does not match the specified value. (Note: cannot be used with text fields; see the DOES NOT MATCH (&quot;!~&quot;) operator instead.)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/notEquals</IRI>
+        <Literal>!=</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/notIn</IRI>
+        <Literal>Used to search for issues where the value of the specified field is not one of multiple specified values.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/notIn</IRI>
+        <Literal>NOT IN</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/was</IRI>
+        <Literal>Used to find issues that currently have or previously had the specified value for the specified field. This operator has the following optional predicates:
+AFTER &quot;date&quot;
+BEFORE &quot;date&quot;
+BY &quot;username&quot; or BY (username1,username2)
+DURING (&quot;date1&quot;,&quot;date2&quot;)
+ON &quot;date&quot;
+
+Examples:
+status WAS &quot;In Progress&quot;
+status WAS &quot;Resolved&quot; BY jsmith BEFORE &quot;2019/02/02&quot;
+status WAS &quot;Resolved&quot; BY jsmith DURING (&quot;2010/01/01&quot;,&quot;2011/01/01&quot;)
+status WAS &quot;Resolved&quot; BY (jsmith,srogen) DURING (&quot;2019/01/01&quot;,&quot;2020/01/01&quot;)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/was</IRI>
+        <Literal>WAS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/workratio</IRI>
+        <Literal>Search for issues where the work ratio has a particular value.
+EXAMPLES:
+Find issues on which the total time spent has gone past the limit:
+workratio &gt; 100
+Find issues on which more than 75% of the original estimate has been spent:
+workratio &gt; 75</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>http://vocab.lksnext.com/vocab.lksnext.com/workratio</IRI>
+        <Literal>workratio</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+

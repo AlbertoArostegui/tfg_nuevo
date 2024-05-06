@@ -131,6 +131,212 @@
 <http://vocab.lksnext.com/Project> rdf:type owl:Class .
 
 
+###  http://vocab.lksnext.com/jira#Assignee
+:Assignee rdf:type owl:Class ;
+          rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLField> ;
+          rdfs:comment """Search for issues that are assigned to a particular user. You can search by the user's full name, ID, or email address.
+EXAMPLES:
+Find issues that are assigned to John Smith:
+assignee = \"John Smith\"or
+assignee = jsmith
+Find issues that are currently assigned, or were previously assigned, to John Smith:
+assignee WAS jsmith
+Find issues that are assigned by the user with email address bob@mycompany.com:
+assignee = \"bob@mycompany.com\"""" ;
+          rdfs:label "Assignee" .
+
+
+###  http://vocab.lksnext.com/jira#Attachments
+:Attachments rdf:type owl:Class ;
+             rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLField> ;
+             rdfs:comment """Search for issues that have or do not have attachments. 
+EXAMPLES:
+Search for issues that have attachments:
+attachments IS NOT EMPTY  
+Search for issues that do not have attachments:
+attachments IS EMPTY""" ;
+             rdfs:label "Attachments" .
+
+
+###  http://vocab.lksnext.com/jira#Changed
+:Changed rdf:type owl:Class ;
+         rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+         rdfs:comment """Used to find issues that have a value that had changed for the specified field.
+This operator has the following optional predicates:
+EXAMPLES:
+status CHANGED FROM <status> TO <status>
+status CHANGED TO <status> DURING (\"2024/01/01\", \"2024/01/31\")
+status CHANGED DURING (\"2023/01/01\", \"2023/02/25\")""" ;
+         rdfs:label "CHANGED" .
+
+
+###  http://vocab.lksnext.com/jira#Comment
+:Comment rdf:type owl:Class ;
+         rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLField> ;
+         rdfs:comment """Search for issues that have a comment that contains particular text using Jira text-search syntax.
+EXAMPLES:
+Find issues where a comment contains the words \"My PC is quite old\":
+comment ~ \"\\\"My PC is quite old\"""" ;
+         rdfs:label "Comment" .
+
+
+###  http://vocab.lksnext.com/jira#Contains
+:Contains rdf:type owl:Class ;
+          rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+          rdfs:comment """Used to search for issues where the value of the specified field matches the specified value (either an exact match or a \"fuzzy\" match — see examples below). For use with text fields only, i.e.:
+Summary
+Description
+Environment
+Comments""" ;
+          rdfs:label "~" .
+
+
+###  http://vocab.lksnext.com/jira#DoesNotContain
+:DoesNotContain rdf:type owl:Class ;
+                rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+                rdfs:comment """Used to search for issues where the value of the specified field is not a \"fuzzy\" match for the specified value. For use with text fields only, i.e.:
+Summary
+Description
+Environment""" ;
+                rdfs:label "!~" .
+
+
+###  http://vocab.lksnext.com/jira#Due
+:Due rdf:type owl:Class ;
+     rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLField> ;
+     rdfs:comment """Search for issues that were due on, before, or after a particular date (or date range). Note that the due date relates to the date only (not to the time).
+\"yyyy/MM/dd\"
+\"yyyy-MM-dd\"""" ;
+     rdfs:label "Due" .
+
+
+###  http://vocab.lksnext.com/jira#Equals
+:Equals rdf:type owl:Class ;
+        rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+        rdfs:comment "Used to search for issues where the value of the specified field exactly matches the specified value. (Note: cannot be used with text fields; see the CONTAINS operator instead.)" ;
+        rdfs:label "=" .
+
+
+###  http://vocab.lksnext.com/jira#GreaterThan
+:GreaterThan rdf:type owl:Class ;
+             rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+             rdfs:comment "Used to search for issues where the value of the specified field is greater than the specified value" ;
+             rdfs:label ">" .
+
+
+###  http://vocab.lksnext.com/jira#GreaterThanOrEqual
+:GreaterThanOrEqual rdf:type owl:Class ;
+                    rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+                    rdfs:comment "Used to search for issues where the value of the specified field is greater than or equal to the specified value" ;
+                    rdfs:label ">=" .
+
+
+###  http://vocab.lksnext.com/jira#IN
+:IN rdf:type owl:Class ;
+    rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+    rdfs:comment "Ued to search for issues where the value of the specified field is one of multiple specified values. The values are specified as a comma-delimited list, surrounded by parentheses." ;
+    rdfs:label "IN" .
+
+
+###  http://vocab.lksnext.com/jira#IS
+:IS rdf:type owl:Class ;
+    rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+    rdfs:comment """It can only be used with EMPTY or NULL. That is, it is used to search for issues where the specified field has no value.
+Examples:
+fixVersion is empty
+fixVersion is null""" ;
+    rdfs:label "IS" .
+
+
+###  http://vocab.lksnext.com/jira#IsNot
+:IsNot rdf:type owl:Class ;
+       rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+       rdfs:comment """It can only be used with EMPTY or NULL. That is, it is used to search for issues where the specified field has a value.
+Examples:
+votes is not empty
+votes is not null""" ;
+       rdfs:label "IS NOT" .
+
+
+###  http://vocab.lksnext.com/jira#Labels
+:Labels rdf:type owl:Class ;
+        rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLField> ;
+        rdfs:label "Labels" ,
+                   """Search for issues tagged with a label or list of labels. You can also search for issues without any labels to easily identify which issues need to be tagged so they show up in the relevant sprints, queues or reports.
+EXAMPLES:
+Find issues with an existing label:
+labels = \"x\"
+Find issues without a specified label, including issues without a label:
+labels not in (\"x\") or labels is EMPTY""" .
+
+
+###  http://vocab.lksnext.com/jira#LessThan
+:LessThan rdf:type owl:Class ;
+          rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+          rdfs:comment "Used to search for issues where the value of the specified field is less than the specified value" ;
+          rdfs:label "<" .
+
+
+###  http://vocab.lksnext.com/jira#LessThanOrEqual
+:LessThanOrEqual rdf:type owl:Class ;
+                 rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+                 rdfs:comment "Used to search for issues where the value of the specified field is less than or equal to than the specified value" ;
+                 rdfs:label "<=" .
+
+
+###  http://vocab.lksnext.com/jira#NotEquals
+:NotEquals rdf:type owl:Class ;
+           rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+           rdfs:comment "Used to search for issues where the value of the specified field does not match the specified value. (Note: cannot be used with text fields; see the DOES NOT MATCH (\"!~\") operator instead.)" ;
+           rdfs:label "!=" .
+
+
+###  http://vocab.lksnext.com/jira#NotIn
+:NotIn rdf:type owl:Class ;
+       rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+       rdfs:comment "Used to search for issues where the value of the specified field is not one of multiple specified values." ;
+       rdfs:label "NOT IN" .
+
+
+###  http://vocab.lksnext.com/jira#Was
+:Was rdf:type owl:Class ;
+     rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+     rdfs:comment """Used to find issues that currently have or previously had the specified value for the specified field. This operator has the following optional predicates:
+AFTER \"date\"
+BEFORE \"date\"
+BY \"username\" or BY (username1,username2)
+DURING (\"date1\",\"date2\")
+ON \"date\"
+
+Examples:
+status WAS \"In Progress\"
+status WAS \"Resolved\" BY jsmith BEFORE \"2019/02/02\"
+status WAS \"Resolved\" BY jsmith DURING (\"2010/01/01\",\"2011/01/01\")
+status WAS \"Resolved\" BY (jsmith,srogen) DURING (\"2019/01/01\",\"2020/01/01\")""" ;
+     rdfs:label "WAS" .
+
+
+###  http://vocab.lksnext.com/jira#Workratio
+:Workratio rdf:type owl:Class ;
+           rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLField> ;
+           rdfs:comment """Search for issues where the work ratio has a particular value.
+EXAMPLES:
+Find issues on which the total time spent has gone past the limit:
+workratio > 100
+Find issues on which more than 75% of the original estimate has been spent:
+workratio > 75""" ;
+           rdfs:label "Workratio" .
+
+
+###  http://vocab.lksnext.com/jira#customFieldName
+:customFieldName rdf:type owl:Class ;
+                 rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/JQLField> ;
+                 rdfs:comment """Search for issues where a particular custom field has a particular value. You can search by custom field name or custom field ID (i.e. the number that Jira automatically allocates to a custom field).
+
+Note, it is safer to search by custom field ID than by custom field name. It is possible for a custom field to have the same name as a built-in Jira system field; in which case, Jira will search for the system field (not your custom field). It is also possible for your Jira administrator to change the name of a custom field, which could break any saved filters that rely on that name. Custom field IDs, however, are unique and cannot be changed.""" ;
+                 rdfs:label "CustomFieldName" .
+
+
 ###  http://vocab.lksnext.com/vocab.lksnext.com/Abierto
 <http://vocab.lksnext.com/vocab.lksnext.com/Abierto> rdf:type owl:Class ;
                                                      rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/Estado> .
@@ -217,7 +423,15 @@
                                                                                         <http://vocab.lksnext.com/vocab.lksnext.com/labels>
                                                                                         <http://vocab.lksnext.com/vocab.lksnext.com/workratio>
                                                                                       )
-                                                                          ] .
+                                                                          ] ;
+                                                      owl:disjointUnionOf ( :Assignee
+                                                                            :Attachments
+                                                                            :Comment
+                                                                            :Due
+                                                                            :Labels
+                                                                            :Workratio
+                                                                            :customFieldName
+                                                                          ) .
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator
@@ -238,7 +452,22 @@
                                                                                            <http://vocab.lksnext.com/vocab.lksnext.com/notIn>
                                                                                            <http://vocab.lksnext.com/vocab.lksnext.com/was>
                                                                                          )
-                                                                             ] .
+                                                                             ] ;
+                                                         owl:disjointUnionOf ( :Changed
+                                                                               :Contains
+                                                                               :DoesNotContain
+                                                                               :Equals
+                                                                               :GreaterThan
+                                                                               :GreaterThanOrEqual
+                                                                               :IN
+                                                                               :IS
+                                                                               :IsNot
+                                                                               :LessThan
+                                                                               :LessThanOrEqual
+                                                                               :NotEquals
+                                                                               :NotIn
+                                                                               :Was
+                                                                             ) .
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/Low
@@ -249,6 +478,11 @@
 ###  http://vocab.lksnext.com/vocab.lksnext.com/Lowest
 <http://vocab.lksnext.com/vocab.lksnext.com/Lowest> rdf:type owl:Class ;
                                                     rdfs:subClassOf <http://vocab.lksnext.com/vocab.lksnext.com/Priority> .
+
+
+###  http://vocab.lksnext.com/vocab.lksnext.com/Manager
+<http://vocab.lksnext.com/vocab.lksnext.com/Manager> rdf:type owl:Class ;
+                                                     rdfs:subClassOf <https://schema.org/Person> .
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/Medium
@@ -294,13 +528,8 @@
 ###  https://schema.org/Person
 <https://schema.org/Person> rdf:type owl:Class ;
                             owl:disjointUnionOf ( <http://vocab.lksnext.com/vocab.lksnext.com/Developer>
-                                                  <vocab.lksnext.com/Manager>
+                                                  <http://vocab.lksnext.com/vocab.lksnext.com/Manager>
                                                 ) .
-
-
-###  vocab.lksnext.com/Manager
-<vocab.lksnext.com/Manager> rdf:type owl:Class ;
-                            rdfs:subClassOf <https://schema.org/Person> .
 
 
 #################################################################
@@ -308,8 +537,7 @@
 #################################################################
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/assignee
-<http://vocab.lksnext.com/vocab.lksnext.com/assignee> rdf:type owl:NamedIndividual ,
-                                                               <http://vocab.lksnext.com/vocab.lksnext.com/JQLField> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/assignee> rdf:type owl:NamedIndividual ;
                                                       <http://vocab.lksnext.com/vocab.lksnext.com/supports> <http://vocab.lksnext.com/vocab.lksnext.com/changed> ,
                                                                                                             <http://vocab.lksnext.com/vocab.lksnext.com/equals> ,
                                                                                                             <http://vocab.lksnext.com/vocab.lksnext.com/in> ,
@@ -367,8 +595,7 @@ assignee = \"bob@mycompany.com\"""" ;
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/attachments
-<http://vocab.lksnext.com/vocab.lksnext.com/attachments> rdf:type owl:NamedIndividual ,
-                                                                  <http://vocab.lksnext.com/vocab.lksnext.com/JQLField> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/attachments> rdf:type owl:NamedIndividual ;
                                                          <http://vocab.lksnext.com/vocab.lksnext.com/supports> <http://vocab.lksnext.com/vocab.lksnext.com/is> ,
                                                                                                                <http://vocab.lksnext.com/vocab.lksnext.com/isNot> ;
                                                          rdfs:comment """Search for issues that have or do not have attachments. 
@@ -453,8 +680,7 @@ attachments IS EMPTY""" ;
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/changed
-<http://vocab.lksnext.com/vocab.lksnext.com/changed> rdf:type owl:NamedIndividual ,
-                                                              <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/changed> rdf:type owl:NamedIndividual ;
                                                      rdfs:comment """Used to find issues that have a value that had changed for the specified field.
 This operator has the following optional predicates:
 EXAMPLES:
@@ -465,8 +691,7 @@ status CHANGED DURING (\"2023/01/01\", \"2023/02/25\")""" ;
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/comment
-<http://vocab.lksnext.com/vocab.lksnext.com/comment> rdf:type owl:NamedIndividual ,
-                                                              <http://vocab.lksnext.com/vocab.lksnext.com/JQLField> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/comment> rdf:type owl:NamedIndividual ;
                                                      <http://vocab.lksnext.com/vocab.lksnext.com/supports> <http://vocab.lksnext.com/vocab.lksnext.com/contains> ,
                                                                                                            <http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain> ;
                                                      rdfs:comment """Search for issues that have a comment that contains particular text using Jira text-search syntax.
@@ -549,8 +774,7 @@ comment ~ \"\\\"My PC is quite old\"""" ;
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/contains
-<http://vocab.lksnext.com/vocab.lksnext.com/contains> rdf:type owl:NamedIndividual ,
-                                                               <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/contains> rdf:type owl:NamedIndividual ;
                                                       rdfs:comment """Used to search for issues where the value of the specified field matches the specified value (either an exact match or a \"fuzzy\" match — see examples below). For use with text fields only, i.e.:
 Summary
 Description
@@ -560,8 +784,7 @@ Comments""" ;
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/customFieldName
-<http://vocab.lksnext.com/vocab.lksnext.com/customFieldName> rdf:type owl:NamedIndividual ,
-                                                                      <http://vocab.lksnext.com/vocab.lksnext.com/JQLField> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/customFieldName> rdf:type owl:NamedIndividual ;
                                                              <http://vocab.lksnext.com/vocab.lksnext.com/supports> <http://vocab.lksnext.com/vocab.lksnext.com/equals> ,
                                                                                                                    <http://vocab.lksnext.com/vocab.lksnext.com/greaterThan> ,
                                                                                                                    <http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals> ,
@@ -603,8 +826,7 @@ Note, it is safer to search by custom field ID than by custom field name. It is 
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain
-<http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain> rdf:type owl:NamedIndividual ,
-                                                                     <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain> rdf:type owl:NamedIndividual ;
                                                             rdfs:comment """Used to search for issues where the value of the specified field is not a \"fuzzy\" match for the specified value. For use with text fields only, i.e.:
 Summary
 Description
@@ -613,8 +835,7 @@ Environment""" ;
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/due
-<http://vocab.lksnext.com/vocab.lksnext.com/due> rdf:type owl:NamedIndividual ,
-                                                          <http://vocab.lksnext.com/vocab.lksnext.com/JQLField> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/due> rdf:type owl:NamedIndividual ;
                                                  <http://vocab.lksnext.com/vocab.lksnext.com/supports> <http://vocab.lksnext.com/vocab.lksnext.com/equals> ,
                                                                                                        <http://vocab.lksnext.com/vocab.lksnext.com/greaterThan> ,
                                                                                                        <http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals> ,
@@ -629,18 +850,6 @@ Environment""" ;
 [ rdf:type owl:NegativePropertyAssertion ;
    owl:sourceIndividual <http://vocab.lksnext.com/vocab.lksnext.com/due> ;
    owl:assertionProperty <http://vocab.lksnext.com/vocab.lksnext.com/supports> ;
-   owl:targetIndividual <http://vocab.lksnext.com/vocab.lksnext.com/changed>
- ] .
-
-[ rdf:type owl:NegativePropertyAssertion ;
-   owl:sourceIndividual <http://vocab.lksnext.com/vocab.lksnext.com/due> ;
-   owl:assertionProperty <http://vocab.lksnext.com/vocab.lksnext.com/supports> ;
-   owl:targetIndividual <http://vocab.lksnext.com/vocab.lksnext.com/contains>
- ] .
-
-[ rdf:type owl:NegativePropertyAssertion ;
-   owl:sourceIndividual <http://vocab.lksnext.com/vocab.lksnext.com/due> ;
-   owl:assertionProperty <http://vocab.lksnext.com/vocab.lksnext.com/supports> ;
    owl:targetIndividual <http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain>
  ] .
 
@@ -650,38 +859,45 @@ Environment""" ;
    owl:targetIndividual <http://vocab.lksnext.com/vocab.lksnext.com/was>
  ] .
 
+[ rdf:type owl:NegativePropertyAssertion ;
+   owl:sourceIndividual <http://vocab.lksnext.com/vocab.lksnext.com/due> ;
+   owl:assertionProperty <http://vocab.lksnext.com/vocab.lksnext.com/supports> ;
+   owl:targetIndividual <http://vocab.lksnext.com/vocab.lksnext.com/changed>
+ ] .
+
+[ rdf:type owl:NegativePropertyAssertion ;
+   owl:sourceIndividual <http://vocab.lksnext.com/vocab.lksnext.com/due> ;
+   owl:assertionProperty <http://vocab.lksnext.com/vocab.lksnext.com/supports> ;
+   owl:targetIndividual <http://vocab.lksnext.com/vocab.lksnext.com/contains>
+ ] .
+
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/equals
-<http://vocab.lksnext.com/vocab.lksnext.com/equals> rdf:type owl:NamedIndividual ,
-                                                             <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/equals> rdf:type owl:NamedIndividual ;
                                                     rdfs:comment "Used to search for issues where the value of the specified field exactly matches the specified value. (Note: cannot be used with text fields; see the CONTAINS operator instead.)" ;
                                                     rdfs:label "=" .
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/greaterThan
-<http://vocab.lksnext.com/vocab.lksnext.com/greaterThan> rdf:type owl:NamedIndividual ,
-                                                                  <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/greaterThan> rdf:type owl:NamedIndividual ;
                                                          rdfs:comment "Used to search for issues where the value of the specified field is greater than the specified value" ;
                                                          rdfs:label ">" .
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals
-<http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals> rdf:type owl:NamedIndividual ,
-                                                                        <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals> rdf:type owl:NamedIndividual ;
                                                                rdfs:comment "Used to search for issues where the value of the specified field is greater than or equal to the specified value" ;
                                                                rdfs:label ">=" .
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/in
-<http://vocab.lksnext.com/vocab.lksnext.com/in> rdf:type owl:NamedIndividual ,
-                                                         <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/in> rdf:type owl:NamedIndividual ;
                                                 rdfs:comment "Ued to search for issues where the value of the specified field is one of multiple specified values. The values are specified as a comma-delimited list, surrounded by parentheses." ;
                                                 rdfs:label "IN" .
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/is
-<http://vocab.lksnext.com/vocab.lksnext.com/is> rdf:type owl:NamedIndividual ,
-                                                         <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/is> rdf:type owl:NamedIndividual ;
                                                 rdfs:comment """It can only be used with EMPTY or NULL. That is, it is used to search for issues where the specified field has no value.
 Examples:
 fixVersion is empty
@@ -690,8 +906,7 @@ fixVersion is null""" ;
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/isNot
-<http://vocab.lksnext.com/vocab.lksnext.com/isNot> rdf:type owl:NamedIndividual ,
-                                                            <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/isNot> rdf:type owl:NamedIndividual ;
                                                    rdfs:comment """It can only be used with EMPTY or NULL. That is, it is used to search for issues where the specified field has a value.
 Examples:
 votes is not empty
@@ -700,8 +915,7 @@ votes is not null""" ;
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/labels
-<http://vocab.lksnext.com/vocab.lksnext.com/labels> rdf:type owl:NamedIndividual ,
-                                                             <http://vocab.lksnext.com/vocab.lksnext.com/JQLField> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/labels> rdf:type owl:NamedIndividual ;
                                                     <http://vocab.lksnext.com/vocab.lksnext.com/supports> <http://vocab.lksnext.com/vocab.lksnext.com/equals> ,
                                                                                                           <http://vocab.lksnext.com/vocab.lksnext.com/in> ,
                                                                                                           <http://vocab.lksnext.com/vocab.lksnext.com/is> ,
@@ -766,36 +980,31 @@ labels not in (\"x\") or labels is EMPTY""" ;
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/lessThan
-<http://vocab.lksnext.com/vocab.lksnext.com/lessThan> rdf:type owl:NamedIndividual ,
-                                                               <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/lessThan> rdf:type owl:NamedIndividual ;
                                                       rdfs:comment "Used to search for issues where the value of the specified field is less than the specified value" ;
                                                       rdfs:label "<" .
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals
-<http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals> rdf:type owl:NamedIndividual ,
-                                                                     <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals> rdf:type owl:NamedIndividual ;
                                                             rdfs:comment "Used to search for issues where the value of the specified field is less than or equal to than the specified value" ;
                                                             rdfs:label "<=" .
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/notEquals
-<http://vocab.lksnext.com/vocab.lksnext.com/notEquals> rdf:type owl:NamedIndividual ,
-                                                                <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/notEquals> rdf:type owl:NamedIndividual ;
                                                        rdfs:comment "Used to search for issues where the value of the specified field does not match the specified value. (Note: cannot be used with text fields; see the DOES NOT MATCH (\"!~\") operator instead.)" ;
                                                        rdfs:label "!=" .
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/notIn
-<http://vocab.lksnext.com/vocab.lksnext.com/notIn> rdf:type owl:NamedIndividual ,
-                                                            <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/notIn> rdf:type owl:NamedIndividual ;
                                                    rdfs:comment "Used to search for issues where the value of the specified field is not one of multiple specified values." ;
                                                    rdfs:label "NOT IN" .
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/was
-<http://vocab.lksnext.com/vocab.lksnext.com/was> rdf:type owl:NamedIndividual ,
-                                                          <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/was> rdf:type owl:NamedIndividual ;
                                                  rdfs:comment """Used to find issues that currently have or previously had the specified value for the specified field. This operator has the following optional predicates:
 AFTER \"date\"
 BEFORE \"date\"
@@ -812,8 +1021,7 @@ status WAS \"Resolved\" BY (jsmith,srogen) DURING (\"2019/01/01\",\"2020/01/01\"
 
 
 ###  http://vocab.lksnext.com/vocab.lksnext.com/workratio
-<http://vocab.lksnext.com/vocab.lksnext.com/workratio> rdf:type owl:NamedIndividual ,
-                                                                <http://vocab.lksnext.com/vocab.lksnext.com/JQLField> ;
+<http://vocab.lksnext.com/vocab.lksnext.com/workratio> rdf:type owl:NamedIndividual ;
                                                        <http://vocab.lksnext.com/vocab.lksnext.com/supports> <http://vocab.lksnext.com/vocab.lksnext.com/equals> ,
                                                                                                              <http://vocab.lksnext.com/vocab.lksnext.com/greaterThan> ,
                                                                                                              <http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals> ,
@@ -876,6 +1084,7 @@ workratio > 75""" ;
                 <http://vocab.lksnext.com/vocab.lksnext.com/Documentation>
                 <http://vocab.lksnext.com/vocab.lksnext.com/Estado>
                 <http://vocab.lksnext.com/vocab.lksnext.com/Issue>
+                <http://vocab.lksnext.com/vocab.lksnext.com/JQLField>
                 <http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator>
                 <http://vocab.lksnext.com/vocab.lksnext.com/Priority>
                 <http://vocab.lksnext.com/vocab.lksnext.com/Subtask>
