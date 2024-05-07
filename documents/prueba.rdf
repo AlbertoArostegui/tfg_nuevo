@@ -1,0 +1,1730 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://vocab.lksnext.com"
+     xml:base="http://vocab.lksnext.com"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vocab="http://vocab.lksnext.com/vocab.lksnext.com/">
+    <owl:Ontology rdf:about="http://vocab.lksnext.com/jira">
+        <rdfs:comment>This Ontology defines JIRA project concepts</rdfs:comment>
+        <rdfs:label>JIRA project Ontology</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/TODO -->
+
+    <owl:AnnotationProperty rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/TODO"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/assignedTo -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/assignedTo">
+        <owl:inverseOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/hasIssue"/>
+        <rdfs:domain rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+        <rdfs:range rdf:resource="https://schema.org/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/documentation -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/documentation">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Documentation"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Documentation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/hasIssue -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/hasIssue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/informer -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/informer">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+        <rdfs:range rdf:resource="https://schema.org/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/partOf -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/partOf">
+        <rdfs:domain rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Subtask"/>
+        <rdfs:range rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/priority -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/priority">
+        <rdfs:domain rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+        <rdfs:range rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Priority"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/project -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/project">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+        <rdfs:range rdf:resource="http://vocab.lksnext.com/Project"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/status -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/status">
+        <rdfs:domain rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+        <rdfs:range rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/supports -->
+
+    <owl:ObjectProperty rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/supports">
+        <rdfs:domain rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+        <rdfs:range rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/createdOn -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/createdOn">
+        <rdfs:domain rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/documentation -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/documentation">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/due -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/due">
+        <rdfs:domain rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/hasDescription">
+        <rdfs:domain rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/hasEndDate -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/hasEndDate">
+        <rdfs:domain rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/hasName">
+        <rdfs:domain rdf:resource="https://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vocab.lksnext.comAssignee -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comAssignee">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comChanged"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comEquals"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comIN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comIS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comIsNot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comNotEquals"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comNotIn"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comWas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Search for issues that are assigned to a particular user. You can search by the user&apos;s full name, ID, or email address.
+EXAMPLES:
+Find issues that are assigned to John Smith:
+assignee = &quot;John Smith&quot;or
+assignee = jsmith
+Find issues that are currently assigned, or were previously assigned, to John Smith:
+assignee WAS jsmith
+Find issues that are assigned by the user with email address bob@mycompany.com:
+assignee = &quot;bob@mycompany.com&quot;</rdfs:comment>
+        <rdfs:label>Assignee</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comAttachments -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comAttachments">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comIS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comIsNot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Search for issues that have or do not have attachments. 
+EXAMPLES:
+Search for issues that have attachments:
+attachments IS NOT EMPTY  
+Search for issues that do not have attachments:
+attachments IS EMPTY</rdfs:comment>
+        <rdfs:label>Attachments</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comChanged -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comChanged">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <rdfs:comment>Used to find issues that have a value that had changed for the specified field.
+This operator has the following optional predicates:
+EXAMPLES:
+status CHANGED FROM &lt;status&gt; TO &lt;status&gt;
+status CHANGED TO &lt;status&gt; DURING (&quot;2024/01/01&quot;, &quot;2024/01/31&quot;)
+status CHANGED DURING (&quot;2023/01/01&quot;, &quot;2023/02/25&quot;)</rdfs:comment>
+        <rdfs:label>CHANGED</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comComment -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comComment">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comContains"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comDoesNotContain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Search for issues that have a comment that contains particular text using Jira text-search syntax.
+EXAMPLES:
+Find issues where a comment contains the words &quot;My PC is quite old&quot;:
+comment ~ &quot;\&quot;My PC is quite old&quot;</rdfs:comment>
+        <rdfs:label>Comment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comContains -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comContains">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <rdfs:comment>Used to search for issues where the value of the specified field matches the specified value (either an exact match or a &quot;fuzzy&quot; match — see examples below). For use with text fields only, i.e.:
+Summary
+Description
+Environment
+Comments</rdfs:comment>
+        <rdfs:label>~</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comDoesNotContain -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comDoesNotContain">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <rdfs:comment>Used to search for issues where the value of the specified field is not a &quot;fuzzy&quot; match for the specified value. For use with text fields only, i.e.:
+Summary
+Description
+Environment</rdfs:comment>
+        <rdfs:label>!~</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comDue -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comDue">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comEquals"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comGreaterThan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comGreaterThanOrEqual"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comIN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comIS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comIsNot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comLessThan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comLessThanOrEqual"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comNotEquals"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comNotIn"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Search for issues that were due on, before, or after a particular date (or date range). Note that the due date relates to the date only (not to the time).
+&quot;yyyy/MM/dd&quot;
+&quot;yyyy-MM-dd&quot;</rdfs:comment>
+        <rdfs:label>Due</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comEquals -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comEquals">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <rdfs:comment>Used to search for issues where the value of the specified field exactly matches the specified value. (Note: cannot be used with text fields; see the CONTAINS operator instead.)</rdfs:comment>
+        <rdfs:label>=</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comGreaterThan -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comGreaterThan">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <rdfs:comment>Used to search for issues where the value of the specified field is greater than the specified value</rdfs:comment>
+        <rdfs:label>&gt;</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comGreaterThanOrEqual -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comGreaterThanOrEqual">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <rdfs:comment>Used to search for issues where the value of the specified field is greater than or equal to the specified value</rdfs:comment>
+        <rdfs:label>&gt;=</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comIN -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comIN">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <rdfs:comment>Ued to search for issues where the value of the specified field is one of multiple specified values. The values are specified as a comma-delimited list, surrounded by parentheses.</rdfs:comment>
+        <rdfs:label>IN</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comIS -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comIS">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <rdfs:comment>It can only be used with EMPTY or NULL. That is, it is used to search for issues where the specified field has no value.
+Examples:
+fixVersion is empty
+fixVersion is null</rdfs:comment>
+        <rdfs:label>IS</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comIsNot -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comIsNot">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <rdfs:comment>It can only be used with EMPTY or NULL. That is, it is used to search for issues where the specified field has a value.
+Examples:
+votes is not empty
+votes is not null</rdfs:comment>
+        <rdfs:label>IS NOT</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comLabels -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comLabels">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comEquals"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comIN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comIS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comIsNot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comNotEquals"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comNotIn"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Search for issues tagged with a label or list of labels. You can also search for issues without any labels to easily identify which issues need to be tagged so they show up in the relevant sprints, queues or reports.
+EXAMPLES:
+Find issues with an existing label:
+labels = &quot;x&quot;
+Find issues without a specified label, including issues without a label:
+labels not in (&quot;x&quot;) or labels is EMPTY</rdfs:comment>
+        <rdfs:label>Labels</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comLessThan -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comLessThan">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <rdfs:comment>Used to search for issues where the value of the specified field is less than the specified value</rdfs:comment>
+        <rdfs:label>&lt;</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comLessThanOrEqual -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comLessThanOrEqual">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <rdfs:comment>Used to search for issues where the value of the specified field is less than or equal to than the specified value</rdfs:comment>
+        <rdfs:label>&lt;=</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comNotEquals -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comNotEquals">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <rdfs:comment>Used to search for issues where the value of the specified field does not match the specified value. (Note: cannot be used with text fields; see the DOES NOT MATCH (&quot;!~&quot;) operator instead.)</rdfs:comment>
+        <rdfs:label>!=</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comNotIn -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comNotIn">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <rdfs:comment>Used to search for issues where the value of the specified field is not one of multiple specified values.</rdfs:comment>
+        <rdfs:label>NOT IN</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comWas -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comWas">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+        <rdfs:comment>Used to find issues that currently have or previously had the specified value for the specified field. This operator has the following optional predicates:
+AFTER &quot;date&quot;
+BEFORE &quot;date&quot;
+BY &quot;username&quot; or BY (username1,username2)
+DURING (&quot;date1&quot;,&quot;date2&quot;)
+ON &quot;date&quot;
+
+Examples:
+status WAS &quot;In Progress&quot;
+status WAS &quot;Resolved&quot; BY jsmith BEFORE &quot;2019/02/02&quot;
+status WAS &quot;Resolved&quot; BY jsmith DURING (&quot;2010/01/01&quot;,&quot;2011/01/01&quot;)
+status WAS &quot;Resolved&quot; BY (jsmith,srogen) DURING (&quot;2019/01/01&quot;,&quot;2020/01/01&quot;)</rdfs:comment>
+        <rdfs:label>WAS</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comWorkratio -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comWorkratio">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comEquals"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comGreaterThan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comGreaterThanOrEqual"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comIN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comIS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comIsNot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comLessThan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comLessThanOrEqual"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comNotEquals"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comNotIn"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Search for issues where the work ratio has a particular value.
+EXAMPLES:
+Find issues on which the total time spent has gone past the limit:
+workratio &gt; 100
+Find issues on which more than 75% of the original estimate has been spent:
+workratio &gt; 75</rdfs:comment>
+        <rdfs:label>Workratio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.comcustomFieldName -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.comcustomFieldName">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comEquals"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comGreaterThan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comGreaterThanOrEqual"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comIN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comIS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comIsNot"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comLessThan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comLessThanOrEqual"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comNotEquals"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.comNotIn"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Search for issues where a particular custom field has a particular value. You can search by custom field name or custom field ID (i.e. the number that Jira automatically allocates to a custom field).
+
+Note, it is safer to search by custom field ID than by custom field name. It is possible for a custom field to have the same name as a built-in Jira system field; in which case, Jira will search for the system field (not your custom field). It is also possible for your Jira administrator to change the name of a custom field, which could break any saved filters that rely on that name. Custom field IDs, however, are unique and cannot be changed.</rdfs:comment>
+        <rdfs:label>CustomFieldName</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/Project -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/Project"/>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Abierto -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Abierto">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Bug -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Bug">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Cerrado -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Cerrado">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Developer -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Developer">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Documentation -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Documentation"/>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/EnProgreso -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/EnProgreso">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+        <rdfs:label>En Progreso</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Entregado -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Entregado">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Epic -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Epic">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Estado -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Estado">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Abierto"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Cerrado"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/EnProgreso"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Entregado"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Reabierto"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Resuelto"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Validado"/>
+        </owl:disjointUnionOf>
+        <rdfs:label>Status</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/High -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/High">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Priority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Highest -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Highest">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Priority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Issue -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Issue">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/project"/>
+                <owl:someValuesFrom rdf:resource="http://vocab.lksnext.com/Project"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/documentation"/>
+                <owl:allValuesFrom rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Documentation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/JQLField -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/JQLField">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://vocab.lksnext.comAssignee"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comAttachments"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comComment"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comDue"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comLabels"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comWorkratio"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comcustomFieldName"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+                    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://vocab.lksnext.comChanged"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comContains"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comDoesNotContain"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comEquals"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comGreaterThan"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comGreaterThanOrEqual"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comIN"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comIS"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comIsNot"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comLessThan"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comLessThanOrEqual"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comNotEquals"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comNotIn"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.comWas"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Low -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Low">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Priority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Lowest -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Lowest">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Priority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Manager -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Manager">
+        <rdfs:subClassOf rdf:resource="https://schema.org/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Medium -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Medium">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Priority"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Priority -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Priority">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/High"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Highest"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Low"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Lowest"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Medium"/>
+        </owl:disjointUnionOf>
+        <rdfs:label>Priority</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Reabierto -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Reabierto">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Resuelto -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Resuelto">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Subtask -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Subtask"/>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Task -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Task">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/Validado -->
+
+    <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Validado">
+        <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+    </owl:Class>
+    
+
+
+    <!-- https://schema.org/Person -->
+
+    <owl:Class rdf:about="https://schema.org/Person">
+        <owl:disjointUnionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Developer"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Manager"/>
+        </owl:disjointUnionOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/assignee -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/assignee">
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+        <rdfs:comment>Search for issues that are assigned to a particular user. You can search by the user&apos;s full name, ID, or email address.
+EXAMPLES:
+Find issues that are assigned to John Smith:
+assignee = &quot;John Smith&quot;or
+assignee = jsmith
+Find issues that are currently assigned, or were previously assigned, to John Smith:
+assignee WAS jsmith
+Find issues that are assigned by the user with email address bob@mycompany.com:
+assignee = &quot;bob@mycompany.com&quot;</rdfs:comment>
+        <rdfs:label>assignee</rdfs:label>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/attachments -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/attachments">
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+        <rdfs:comment>Search for issues that have or do not have attachments. 
+EXAMPLES:
+Search for issues that have attachments:
+attachments IS NOT EMPTY  
+Search for issues that do not have attachments:
+attachments IS EMPTY</rdfs:comment>
+        <rdfs:label>attachments</rdfs:label>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/attachments"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/changed -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/changed">
+        <rdfs:comment>Used to find issues that have a value that had changed for the specified field.
+This operator has the following optional predicates:
+EXAMPLES:
+status CHANGED FROM &lt;status&gt; TO &lt;status&gt;
+status CHANGED TO &lt;status&gt; DURING (&quot;2024/01/01&quot;, &quot;2024/01/31&quot;)
+status CHANGED DURING (&quot;2023/01/01&quot;, &quot;2023/02/25&quot;)</rdfs:comment>
+        <rdfs:label>CHANGED</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/comment -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/comment">
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+        <rdfs:comment>Search for issues that have a comment that contains particular text using Jira text-search syntax.
+EXAMPLES:
+Find issues where a comment contains the words &quot;My PC is quite old&quot;:
+comment ~ &quot;\&quot;My PC is quite old&quot;</rdfs:comment>
+        <rdfs:label>comment</rdfs:label>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/comment"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/contains -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/contains">
+        <rdfs:comment>Used to search for issues where the value of the specified field matches the specified value (either an exact match or a &quot;fuzzy&quot; match — see examples below). For use with text fields only, i.e.:
+Summary
+Description
+Environment
+Comments</rdfs:comment>
+        <rdfs:label>~</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/customFieldName -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName">
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+        <rdfs:comment>Search for issues where a particular custom field has a particular value. You can search by custom field name or custom field ID (i.e. the number that Jira automatically allocates to a custom field).
+
+Note, it is safer to search by custom field ID than by custom field name. It is possible for a custom field to have the same name as a built-in Jira system field; in which case, Jira will search for the system field (not your custom field). It is also possible for your Jira administrator to change the name of a custom field, which could break any saved filters that rely on that name. Custom field IDs, however, are unique and cannot be changed.</rdfs:comment>
+        <rdfs:label>customFieldName</rdfs:label>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/customFieldName"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain">
+        <rdfs:comment>Used to search for issues where the value of the specified field is not a &quot;fuzzy&quot; match for the specified value. For use with text fields only, i.e.:
+Summary
+Description
+Environment</rdfs:comment>
+        <rdfs:label>!~</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/due -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/due">
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/equals -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/equals">
+        <rdfs:comment>Used to search for issues where the value of the specified field exactly matches the specified value. (Note: cannot be used with text fields; see the CONTAINS operator instead.)</rdfs:comment>
+        <rdfs:label>=</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/greaterThan -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan">
+        <rdfs:comment>Used to search for issues where the value of the specified field is greater than the specified value</rdfs:comment>
+        <rdfs:label>&gt;</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals">
+        <rdfs:comment>Used to search for issues where the value of the specified field is greater than or equal to the specified value</rdfs:comment>
+        <rdfs:label>&gt;=</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/in -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/in">
+        <rdfs:comment>Ued to search for issues where the value of the specified field is one of multiple specified values. The values are specified as a comma-delimited list, surrounded by parentheses.</rdfs:comment>
+        <rdfs:label>IN</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/is -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/is">
+        <rdfs:comment>It can only be used with EMPTY or NULL. That is, it is used to search for issues where the specified field has no value.
+Examples:
+fixVersion is empty
+fixVersion is null</rdfs:comment>
+        <rdfs:label>IS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/isNot -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/isNot">
+        <rdfs:comment>It can only be used with EMPTY or NULL. That is, it is used to search for issues where the specified field has a value.
+Examples:
+votes is not empty
+votes is not null</rdfs:comment>
+        <rdfs:label>IS NOT</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/labels -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/labels">
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+        <rdfs:comment>Search for issues tagged with a label or list of labels. You can also search for issues without any labels to easily identify which issues need to be tagged so they show up in the relevant sprints, queues or reports.
+EXAMPLES:
+Find issues with an existing label:
+labels = &quot;x&quot;
+Find issues without a specified label, including issues without a label:
+labels not in (&quot;x&quot;) or labels is EMPTY</rdfs:comment>
+        <rdfs:label>labels</rdfs:label>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/labels"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/lessThan -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/lessThan">
+        <rdfs:comment>Used to search for issues where the value of the specified field is less than the specified value</rdfs:comment>
+        <rdfs:label>&lt;</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals">
+        <rdfs:comment>Used to search for issues where the value of the specified field is less than or equal to than the specified value</rdfs:comment>
+        <rdfs:label>&lt;=</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/notEquals -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/notEquals">
+        <rdfs:comment>Used to search for issues where the value of the specified field does not match the specified value. (Note: cannot be used with text fields; see the DOES NOT MATCH (&quot;!~&quot;) operator instead.)</rdfs:comment>
+        <rdfs:label>!=</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/notIn -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/notIn">
+        <rdfs:comment>Used to search for issues where the value of the specified field is not one of multiple specified values.</rdfs:comment>
+        <rdfs:label>NOT IN</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/was -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/was">
+        <rdfs:comment>Used to find issues that currently have or previously had the specified value for the specified field. This operator has the following optional predicates:
+AFTER &quot;date&quot;
+BEFORE &quot;date&quot;
+BY &quot;username&quot; or BY (username1,username2)
+DURING (&quot;date1&quot;,&quot;date2&quot;)
+ON &quot;date&quot;
+
+Examples:
+status WAS &quot;In Progress&quot;
+status WAS &quot;Resolved&quot; BY jsmith BEFORE &quot;2019/02/02&quot;
+status WAS &quot;Resolved&quot; BY jsmith DURING (&quot;2010/01/01&quot;,&quot;2011/01/01&quot;)
+status WAS &quot;Resolved&quot; BY (jsmith,srogen) DURING (&quot;2019/01/01&quot;,&quot;2020/01/01&quot;)</rdfs:comment>
+        <rdfs:label>WAS</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://vocab.lksnext.com/vocab.lksnext.com/workratio -->
+
+    <owl:NamedIndividual rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/workratio">
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+        <vocab:supports rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+        <rdfs:comment>Search for issues where the work ratio has a particular value.
+EXAMPLES:
+Find issues on which the total time spent has gone past the limit:
+workratio &gt; 100
+Find issues on which more than 75% of the original estimate has been spent:
+workratio &gt; 75</rdfs:comment>
+        <rdfs:label>workratio</rdfs:label>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NegativePropertyAssertion"/>
+        <owl:sourceIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/workratio"/>
+        <owl:assertionProperty rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/supports"/>
+        <owl:targetIndividual rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/due">
+        <rdfs:comment>Search for issues that were due on, before, or after a particular date (or date range). Note that the due date relates to the date only (not to the time).
+&quot;yyyy/MM/dd&quot;
+&quot;yyyy-MM-dd&quot;</rdfs:comment>
+        <rdfs:label>due</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://vocab.lksnext.com/Project"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Documentation"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Issue"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/JQLField"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/JQLOperator"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Priority"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Subtask"/>
+            <rdf:Description rdf:about="https://schema.org/Person"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/assignee"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/changed"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/contains"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/doesNotContain"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/due"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/equals"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/greaterThan"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/greaterThanEquals"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/in"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/is"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/isNot"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/lessThan"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/lessThanEquals"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/notEquals"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/notIn"/>
+            <rdf:Description rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/was"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
