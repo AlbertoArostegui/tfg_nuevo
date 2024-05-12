@@ -776,6 +776,7 @@ Note, it is safer to search by custom field ID than by custom field name. It is 
 
     <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Abierto">
         <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+        <rdfs:label>Abierto</rdfs:label>
     </owl:Class>
     
 
@@ -792,6 +793,7 @@ Note, it is safer to search by custom field ID than by custom field name. It is 
 
     <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Cerrado">
         <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+        <rdfs:label>Cerrado</rdfs:label>
     </owl:Class>
     
 
@@ -823,6 +825,7 @@ Note, it is safer to search by custom field ID than by custom field name. It is 
 
     <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Entregado">
         <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+        <rdfs:label>Entregado</rdfs:label>
     </owl:Class>
     
 
@@ -1010,6 +1013,7 @@ Note, it is safer to search by custom field ID than by custom field name. It is 
 
     <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Reabierto">
         <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+        <rdfs:label>Reabierto</rdfs:label>
     </owl:Class>
     
 
@@ -1018,6 +1022,7 @@ Note, it is safer to search by custom field ID than by custom field name. It is 
 
     <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Resuelto">
         <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+        <rdfs:label>Resuelto</rdfs:label>
     </owl:Class>
     
 
@@ -1040,6 +1045,7 @@ Note, it is safer to search by custom field ID than by custom field name. It is 
 
     <owl:Class rdf:about="http://vocab.lksnext.com/vocab.lksnext.com/Validado">
         <rdfs:subClassOf rdf:resource="http://vocab.lksnext.com/vocab.lksnext.com/Estado"/>
+        <rdfs:label>Validado</rdfs:label>
     </owl:Class>
     
 
