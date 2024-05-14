@@ -93,7 +93,7 @@ with open(ruta_preguntas, 'r', encoding='utf-8') as file_preguntas:
         try:
             incidencias_obtenidas.sort(key=sort_key)
             incidencias_esperadas.sort(key=sort_key)
-        except:
+        except: 
             pass
             
         acierto = incidencias_esperadas == incidencias_obtenidas
