@@ -38,11 +38,19 @@ def ontology_retriever(texto_pregunta):
             except IndexError:
                 relevant_info += "Comment: None\n"
 
+            try:
+                relevant_info += "Supports operators: " + ", ".join([y.label[0] for y in x.supports]) + "\n"
+            except:
+                print("supports peta")
+
             relevant_info += "Subclasses of the field: \n"
 
             for y in x.subclasses():
-                relevant_info += y.label[0] + "\n"
+                try:
+                    relevant_info += y.label[0] + "\n"
+                except IndexError:
+                    pass
         
         relevant_info += "\n\n"
-
+    
     return relevant_info

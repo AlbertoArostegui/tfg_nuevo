@@ -75,8 +75,11 @@ with open(ruta_preguntas, 'r', encoding='utf-8') as file_preguntas:
         chain = prompt | chat | StrOutputParser()
         llm_generated = chain.invoke({"context": doc, "question": question})
         
+        print(question)
+        print(llm_generated)
         time.sleep(.2)
         incidencias_obtenidas = []
+
 
         acierto = False
         incidencias_obtenidas = get_keys_for_query(llm_generated)

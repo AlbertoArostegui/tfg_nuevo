@@ -21,7 +21,7 @@ template_rag_embeddings = """<|begin_of_text|><|start_header_id|>system<|end_hea
 template_retrieve_ontology_fields = """<|begin_of_text|><|start_header_id|>system<|end_header_id|> You are a JQL assistant for question-answering tasks.
             Given the following JQL fields in the context and a question, you must answer with a list of the relevant fields for the given question, return the fields separated by commas. For example, for the question "Cuando vencen las incidencias asignadas a Alberto Arostegui?" you should return "Assignee, Due". Do not return any additional comments. Return ONLY 2 fields at most.
             <|eot_id|><|start_header_id|>user<|end_header_id|>
-            Context: Assignee, Attachments, Comment, CustomFieldName, Due, Labels, Workratio, Status 
+            Context: Assignee, Attachments, Comment, CustomFieldName, Due, Labels, Workratio, Status, Priority 
             Question: {question}
             Answer: <|eot_id|><|start_header_id|>assistant<|end_header_id|>"""
 
