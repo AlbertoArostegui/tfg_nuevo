@@ -8,7 +8,6 @@ from owlready2 import *
 def ontology_retriever(texto_pregunta):
 
     local_model = "llama3:8b"
-    embeddings = OpenAIEmbeddings()
 
     chat = ChatOllama(model=local_model, base_url="http://127.0.0.1:11434")
 

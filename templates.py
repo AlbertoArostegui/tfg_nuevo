@@ -26,8 +26,15 @@ template_retrieve_ontology_fields = """<|begin_of_text|><|start_header_id|>syste
             Answer: <|eot_id|><|start_header_id|>assistant<|end_header_id|>"""
 
 template_ontology_fields = """<|begin_of_text|><|start_header_id|>system<|end_header_id|> You are a JQL assistant for question-answering tasks.
-            Given the following JQL fields and some additional information based on an ontology describing how to generate JQL queries and a question, you must answer with the JQL query that will answer the given question. You only have to return the JQL query for it to run verbatim, do not return any additional comments. So, for example, for the question "Que incidencias estan En Progreso?" you should return "status = 'En Progreso'.
+            Given the following JQL fields and some additional information based on an ontology describing how to generate JQL queries and a question, you must answer with the JQL query that will answer the given question. You only have to return the JQL query for it to run verbatim, do not return any additional comments. So, for example, for the question "Que incidencias estan En Progreso en GPT4?" you should return "status = 'En Progreso' AND project = GPT4".
             <|eot_id|><|start_header_id|>user<|end_header_id|>
             Context: {context} 
+            Question: {question}
+            Answer: <|eot_id|><|start_header_id|>assistant<|end_header_id|>"""
+
+template_retrieve_graph_nodes = """<|begin_of_text|><|start_header_id|>system<|end_header_id|> You are a JQL assistant for question-answering tasks.
+            Given the following question, you must answer with a list of the relevant nodes for a conceptual JIRA graph, return the fields separated by commas. So, you would return relevant fields for the given question, the project, the person, the issue. For example, for the question "Cuando vencen las incidencias de MFM asignadas a Alberto Arostegui?" you should return "MFM, Alberto Arostegui, Issue, assignee". Do not return any additional comments. In the context there are possible nodes.
+            <|eot_id|><|start_header_id|>user<|end_header_id|>
+            Context: Person, Issue, assignee, Project, due
             Question: {question}
             Answer: <|eot_id|><|start_header_id|>assistant<|end_header_id|>"""

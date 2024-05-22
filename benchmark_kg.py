@@ -5,7 +5,7 @@ import templates
 import dotenv
 from datetime import datetime
 from tools.jira_json_retrieval import get_keys_for_query
-from ontology_retriever import ontology_retriever
+from retriever_graph import graph_retriever
 from colorama import Fore
 
 #Langchain
@@ -66,7 +66,7 @@ with open(ruta_preguntas, 'r', encoding='utf-8') as file_preguntas:
         chat = ChatOllama(model=local_model, base_url="http://127.0.0.1:11434")
 
         prompt = PromptTemplate(
-            template = templates.template_ontology_fields,
+            template = templates.template_rag_embeddings,
             input_variables = ["question", "document"],
         )
 

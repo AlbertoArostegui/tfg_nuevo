@@ -17,7 +17,6 @@ def get_keys_for_query(query_ground_truth):
 
     json_response = response.json()
     try:
-        print(json_response)
         incidencias_obtenidas = [issue['key'] for issue in json_response['issues']]
     except:
         print("Error en la petición a Jira con: " + query_ground_truth + "\n" + str(json_response))
