@@ -24,4 +24,4 @@ def get_keys_for_query(query_ground_truth):
 
     return incidencias_obtenidas
 
-get_keys_for_query("project = GPT4")
+get_keys_for_query('project in (projectMatch("projectStartDate > 2025-02-28"))')
