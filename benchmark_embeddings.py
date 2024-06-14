@@ -8,7 +8,8 @@ from tools.jira_json_retrieval import get_keys_for_query
 from colorama import Fore
 
 #Langchain
-from langchain_community.chat_models import ChatOllama
+#from langchain_community.chat_models import ChatOllama
+from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import StrOutputParser
 from langchain.prompts import PromptTemplate
 
@@ -19,9 +20,7 @@ dotenv.load_dotenv()
 
 ruta_preguntas = 'benchmark/ES_preguntas_train_V2.csv'
 ruta_resultados = f'benchmark/resultados/out_benchmark_{current_time}.csv'
-ruta_ontologia = 'JIRA_JQL_ontologia.ttl'
-ruta_json = 'json/ph.json'
-local_model = "llama3:8b"
+local_model = "gpt-4o-2024-05-13"
 
 cont_preguntas = 0
 cont_fallos = 0
@@ -62,7 +61,8 @@ with open(ruta_preguntas, 'r', encoding='utf-8') as file_preguntas:
         incidencias_esperadas = row['incidencias_asignadas'].split(',')
         jql_esperado = row['jql_esperado']
 
-        chat = ChatOllama(model=local_model, base_url="http://127.0.0.1:11434")
+        #chat = ChatOllama(model=local_model, base_url="http://127.0.0.1:11434")
+        chat = ChatOpenAI(model=local_model)
 
         prompt = PromptTemplate(
             template = templates.template_rag_embeddings,

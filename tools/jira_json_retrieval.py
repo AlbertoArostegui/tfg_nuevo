@@ -23,5 +23,3 @@ def get_keys_for_query(query_ground_truth):
         incidencias_obtenidas = []
 
     return incidencias_obtenidas
-
-get_keys_for_query('project in (projectMatch("projectStartDate > 2025-02-28"))')
