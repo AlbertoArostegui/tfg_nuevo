@@ -1,6 +1,7 @@
 import templates
 from langchain_community.embeddings import OpenAIEmbeddings
 from langchain_community.chat_models import ChatOllama
+from langchain_openai.chat_models import ChatOpenAI
 from langchain.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 import rdflib
@@ -9,9 +10,10 @@ from SPARQLWrapper import SPARQLWrapper, JSON, RDF
 
 def graph_retriever(texto_pregunta):
 
-    local_model = "llama3:8b"
+    local_model = "gpt-3.5-turbo"
 
-    chat = ChatOllama(model=local_model, base_url="http://127.0.0.1:11434")
+    #chat = ChatOllama(model=local_model, base_url="http://127.0.0.1:11434")
+    chat = ChatOpenAI(model=local_model)
 
     prompt = PromptTemplate(
         template = templates.template_retrieve_graph_nodes,
@@ -55,6 +57,3 @@ def graph_retriever(texto_pregunta):
             print('exception')
 
     return relevant_info
-
-out = graph_retriever("Cuántos tickets se han resuelto en agosto de 2023 en el proyecto GPT4?")
-print(out)

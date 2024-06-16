@@ -8,7 +8,6 @@ from tools.jira_json_retrieval import get_keys_for_query
 from colorama import Fore
 
 #Langchain
-#from langchain_community.chat_models import ChatOllama
 from langchain_openai import ChatOpenAI
 from langchain_core.output_parsers import StrOutputParser
 from langchain.prompts import PromptTemplate
@@ -19,7 +18,7 @@ current_time = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 dotenv.load_dotenv()
 
 ruta_preguntas = 'benchmark/ES_preguntas_train_V2.csv'
-ruta_resultados = f'benchmark/resultados/out_benchmark_embeddings_{current_time}.csv'
+ruta_resultados = f'benchmark/resultados/out_benchmark_standalone_{current_time}.csv'
 local_model = "gpt-3.5-turbo"
 
 cont_preguntas = 0
@@ -61,20 +60,18 @@ with open(ruta_preguntas, 'r', encoding='utf-8') as file_preguntas:
         incidencias_esperadas = row['incidencias_asignadas'].split(',')
         jql_esperado = row['jql_esperado']
 
-        #chat = ChatOllama(model=local_model, base_url="http://127.0.0.1:11434")
         chat = ChatOpenAI(model=local_model)
 
         prompt = PromptTemplate(
-            template = templates.template_rag_embeddings,
-            input_variables = ["question", "document"],
+            template = templates.template_standalone,
+            input_variables = ["question"],
         )
 
         from embeddings_retriever import embeddings_retriever
         question = texto_pregunta
-        doc = embeddings_retriever(texto_pregunta)
         chain = prompt | chat | StrOutputParser()
-        llm_generated = chain.invoke({"context": doc, "question": question})
-        print(llm_generated)
+        llm_generated = chain.invoke({"question": question})
+        print(llm_generated + "\n")
         
         time.sleep(.2)
         incidencias_obtenidas = []
