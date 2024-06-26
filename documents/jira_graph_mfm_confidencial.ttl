@@ -1,0 +1,388 @@
+@prefix ns1: <http://vocab.lksnext.com/jira/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<Arkaitz_Carbajo> ns1:reporter ns1:MFM-35,
+        ns1:MFM-37,
+        ns1:MFM-38,
+        ns1:MFM-39,
+        ns1:MFM-41,
+        ns1:MFM-42,
+        ns1:MFM-43,
+        ns1:MFM-44,
+        ns1:MFM-45,
+        ns1:MFM-46,
+        ns1:MFM-47,
+        ns1:MFM-88 .
+
+<Asier_Fernández_Irazabal> a <https//schema.org/Person> ;
+    ns1:assignee ns1:MFM-60,
+        ns1:MFM-85,
+        ns1:MFM-88 ;
+    rdf:Property "Asier_Fernández_Irazabal" .
+
+<Manager1> ns1:reporter ns1:MFM-36,
+        ns1:MFM-49,
+        ns1:MFM-50,
+        ns1:MFM-51,
+        ns1:MFM-52,
+        ns1:MFM-53,
+        ns1:MFM-54,
+        ns1:MFM-55,
+        ns1:MFM-56,
+        ns1:MFM-57,
+        ns1:MFM-58,
+        ns1:MFM-59,
+        ns1:MFM-60,
+        ns1:MFM-61,
+        ns1:MFM-62,
+        ns1:MFM-63,
+        ns1:MFM-64,
+        ns1:MFM-65,
+        ns1:MFM-66,
+        ns1:MFM-67,
+        ns1:MFM-68,
+        ns1:MFM-69,
+        ns1:MFM-70,
+        ns1:MFM-71,
+        ns1:MFM-72,
+        ns1:MFM-73,
+        ns1:MFM-74,
+        ns1:MFM-75,
+        ns1:MFM-78,
+        ns1:MFM-79,
+        ns1:MFM-80,
+        ns1:MFM-81,
+        ns1:MFM-82,
+        ns1:MFM-83,
+        ns1:MFM-84,
+        ns1:MFM-85,
+        ns1:MFM-86,
+        ns1:MFM-87 .
+
+<Raquel_Acebes> a <https//schema.org/Person> ;
+    ns1:assignee ns1:MFM-42,
+        ns1:MFM-45,
+        ns1:MFM-46,
+        ns1:MFM-47,
+        ns1:MFM-78 ;
+    rdf:Property "Raquel_Acebes" .
+
+<luis.salvatierra> a <https//schema.org/Person> ;
+    ns1:assignee ns1:MFM-36,
+        ns1:MFM-37,
+        ns1:MFM-38,
+        ns1:MFM-39,
+        ns1:MFM-41,
+        ns1:MFM-43,
+        ns1:MFM-44,
+        ns1:MFM-49,
+        ns1:MFM-50,
+        ns1:MFM-51,
+        ns1:MFM-52,
+        ns1:MFM-53,
+        ns1:MFM-54,
+        ns1:MFM-55,
+        ns1:MFM-56,
+        ns1:MFM-57,
+        ns1:MFM-58,
+        ns1:MFM-59,
+        ns1:MFM-61,
+        ns1:MFM-62,
+        ns1:MFM-63,
+        ns1:MFM-64,
+        ns1:MFM-65,
+        ns1:MFM-66,
+        ns1:MFM-67,
+        ns1:MFM-68,
+        ns1:MFM-69,
+        ns1:MFM-70,
+        ns1:MFM-71,
+        ns1:MFM-72,
+        ns1:MFM-73,
+        ns1:MFM-74,
+        ns1:MFM-75,
+        ns1:MFM-79,
+        ns1:MFM-80,
+        ns1:MFM-81,
+        ns1:MFM-82,
+        ns1:MFM-83,
+        ns1:MFM-84,
+        ns1:MFM-86,
+        ns1:MFM-87 ;
+    rdf:Property "luis.salvatierra" .
+
+<Persona1> a <https//schema.org/Person> ;
+    ns1:assignee ns1:MFM-36,
+        ns1:MFM-35;
+    rdf:Property "Persona X" .
+
+<unassigned> a <https//schema.org/Person> ;
+    ns1:assignee ns1:MFM-35 .
+
+ns1:Cerrado a ns1:Status ;
+    rdf:Property "Cerrado" .
+
+ns1:En_progreso a ns1:Status ;
+    rdf:Property "En progreso" .
+
+ns1:MFM-35 a ns1:Tarea ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-05T12:20:03.581+0100> ;
+    ns1:status ns1:Abierto .
+
+ns1:MFM-36 a ns1:Tarea ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-05T12:25:21.798+0100> ;
+    ns1:status ns1:Resuelto .
+
+ns1:MFM-37 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-07T16:06:11.485+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-38 a ns1:Tarea ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-08T09:53:20.286+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-39 a ns1:Tarea ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-12T09:19:33.217+0100> ;
+    ns1:status ns1:Resuelto .
+
+ns1:MFM-41 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-13T15:35:28.728+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-42 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-13T15:36:30.510+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-43 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-13T15:37:31.499+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-44 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-13T15:39:37.084+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-45 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-13T15:40:33.717+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-46 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-13T15:41:21.161+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-47 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-13T15:41:39.851+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-49 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-19T16:17:49.163+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-50 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-19T16:23:49.341+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-51 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-19T17:19:58.125+0100> ;
+    ns1:status ns1:Cerrado .
+
+ns1:MFM-52 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-19T17:21:27.611+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-53 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-19T17:33:07.405+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-54 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T10:25:21.616+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-55 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T10:45:44.985+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-56 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T10:54:59.328+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-57 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T10:55:43.103+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-58 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T10:56:56.149+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-59 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T10:57:59.489+0100> ;
+    ns1:status ns1:Resuelto .
+
+ns1:MFM-60 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T13:33:11.827+0100> ;
+    ns1:status ns1:En_progreso .
+
+ns1:MFM-61 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T13:40:22.634+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-62 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T13:41:13.541+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-63 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T13:48:51.499+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-64 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T13:49:20.207+0100> ;
+    ns1:status ns1:Resuelto .
+
+ns1:MFM-65 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T13:50:58.297+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-66 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T13:51:41.828+0100> ;
+    ns1:status ns1:Resuelto .
+
+ns1:MFM-67 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T13:55:52.820+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-68 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T14:05:04.866+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-69 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T14:17:14.852+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-70 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T14:17:48.308+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-71 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T14:23:11.163+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-72 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T14:23:52.311+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-73 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T14:24:25.939+0100> ;
+    ns1:status ns1:Resuelto .
+
+ns1:MFM-74 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T14:27:48.792+0100> ;
+    ns1:status ns1:Resuelto .
+
+ns1:MFM-75 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-02-20T14:29:43.316+0100> ;
+    ns1:status ns1:Validado .
+
+ns1:MFM-78 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-03-05T10:28:57.833+0100> ;
+    ns1:status ns1:Abierto .
+
+ns1:MFM-79 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-03-05T10:56:29.735+0100> ;
+    ns1:status ns1:Resuelto .
+
+ns1:MFM-80 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-03-05T10:57:19.376+0100> ;
+    ns1:status ns1:Resuelto .
+
+ns1:MFM-81 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-03-05T12:29:38.008+0100> ;
+    ns1:status ns1:Resuelto .
+
+ns1:MFM-82 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-03-05T12:32:07.087+0100> ;
+    ns1:status ns1:Resuelto .
+
+ns1:MFM-83 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-03-05T12:35:12.416+0100> ;
+    ns1:status ns1:Resuelto .
+
+ns1:MFM-84 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-03-05T13:00:30.192+0100> ;
+    ns1:status ns1:Resuelto .
+
+ns1:MFM-85 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-03-05T13:03:31.058+0100> ;
+    ns1:status ns1:En_progreso .
+
+ns1:MFM-86 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-03-05T13:07:04.007+0100> ;
+    ns1:status ns1:Resuelto .
+
+ns1:MFM-87 a ns1:Error ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-03-15T10:11:11.202+0100> ;
+    ns1:status ns1:Resuelto .
+
+ns1:MFM-88 a ns1:Tarea ;
+    ns1:belongsTo ns1:MFM ;
+    ns1:created <http://vocab.lksnext.com/jira/2024-04-10T12:11:29.398+0200> ;
+    ns1:status ns1:Abierto .
+
+ns1:Abierto a ns1:Status ;
+    rdf:Property "Abierto" .
+
+ns1:Resuelto a ns1:Status ;
+    rdf:Property "Resuelto" .
+
+ns1:Validado a ns1:Status ;
+    rdf:Property "Validado" .
+
+ns1:MFM a ns1:Project .
+

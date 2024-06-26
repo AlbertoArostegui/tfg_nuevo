@@ -8,7 +8,7 @@ from owlready2 import *
 
 def ontology_retriever(texto_pregunta):
 
-    local_model = "gpt-3.5-turbo"
+    local_model = "gpt-4o-2024-05-13"
 
     #chat = ChatOllama(model=local_model, base_url="http://127.0.0.1:11434")
     chat = ChatOpenAI(model=local_model)
@@ -55,3 +55,7 @@ def ontology_retriever(texto_pregunta):
         relevant_info += "\n\n"
     
     return relevant_info
+
+from dotenv import load_dotenv
+load_dotenv()
+print(ontology_retriever("Dame las incidencias en progreso para el proyecto MFM"))

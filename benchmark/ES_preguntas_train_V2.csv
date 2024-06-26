@@ -1,101 +1,101 @@
 id_pregunta,texto_pregunta,incidencias_asignadas,jql_esperado
-1,Muestra las incidencias en progreso en GPT4,"GPT4-15,GPT4-17,GPT4-18,GPT4-19,GPT4-20,GPT4-23,GPT4-26,GPT4-27","status = ""En progreso""" and project = GPT4
-2,Muestra las incidencias en progreso y sus horas acumuladas en GPT4,"GPT4-15,GPT4-17,GPT4-18,GPT4-19,GPT4-20,GPT4-23,GPT4-26,GPT4-27","status = ""En progreso"" and project = GPT4"
-3,Muestra las incidencias que ya estan entregadas a cliente en GPT4,GPT4-12,"status = ""Entregado""" and project = GPT4
-4,Muestra las incidencias que se han pasado de horas y por cuánto en GPT4,"GPT4-17",workratio > 100 and project = GPT4
-5,Muestra las incidencias que deberían acabar en agosto de 2023 en el proyecto GPT4,"GPT4-18,GPT4-29","due >= ""2023-08-01"" AND due <= ""2023-08-31"""
-6,Muestra las incidencias sin cerrar ni resolver en GPT4,"GPT4-12,GPT4-15,GPT4-16,GPT4-17,GPT4-18,GPT4-19,GPT4-20,GPT4-21,GPT4-22,GPT4-23,GPT4-25,GPT4-26,GPT4-27,GPT4-28,GPT4-29,GPT4-30","status not in (Resuelto, Cerrado) and project = GPT4"
-7,Muestra quién tiene menos carga de trabajo en el proyecto GPT4,"GPT4-30,GPT4-29,GPT4-28,GPT4-27,GPT4-26,GPT4-25,GPT4-24,GPT4-23,GPT4-22,GPT4-21,GPT4-20,GPT4-19,GPT4-18,GPT4-17,GPT4-16,GPT4-15,GPT4-14,GPT4-13,GPT4-12,GPT4-11","project = GPT4 ORDER BY assignee ASC, updated DESC"
-8,Muestra quién tiene menos carga de trabajo en GPT4,"GPT4-30,GPT4-29,GPT4-28,GPT4-27,GPT4-26,GPT4-25,GPT4-24,GPT4-23,GPT4-22,GPT4-21,GPT4-20,GPT4-19,GPT4-18,GPT4-17,GPT4-16,GPT4-15,GPT4-14,GPT4-13,GPT4-12,GPT4-11","project = ""GPT4"""
-9,Cuántos tickets se han resuelto en agosto de 2023 en el proyecto GPT4?,"GPT4-16,GPT4-15,GPT4-13,GPT4-12","status changed to Resuelto DURING ('2023-08-01', '2023-08-31')"
-10,Cuántos tickets se han resuelto en agosto de 2023 en GPT4 en el proyecto GPT4?,"GPT4-16,GPT4-15,GPT4-13,GPT4-12","project = GPT4 AND status changed to Resuelto DURING ('2023-08-01', '2023-08-31')"
-11,Muéstrame todas las incidencias abiertas asignadas a Alberto Aróstegui García en GPT4,"GPT4-21,GPT4-25","project = GPT4 AND assignee = 'Alberto Aróstegui García' AND status = Abierto"
-12,Muéstrame todas las incidencias con estado Abierto asignadas a Alberto Aróstegui García en GPT4,"GPT4-21,GPT4-25",project = GPT4 AND assignee = 'Alberto Aróstegui García' AND status = Abierto
-13,¿Cuántos tickets sin resolver hay en el proyecto GPT4?,"GPT4-30,GPT4-29,GPT4-28,GPT4-27,GPT4-26,GPT4-25,GPT4-24,GPT4-23,GPT4-22,GPT4-21,GPT4-20,GPT4-19,GPT4-18,GPT4-17,GPT4-16,GPT4-15,GPT4-14,GPT4-12",project = GPT4 AND status != Resuelto
-14,Encuentra las incidencias asignadas a Alberto Aróstegui García en el proyecto GPT4.,"GPT4-19,GPT4-21,GPT4-27",project = GPT4 AND assignee = 'Alberto Aróstegui García'
-15,¿Cuántas incidencias se cerraron en agosto de 2023?,GPT4-14,"status changed to Cerrado DURING ('2023-08-01', '2023-08-31')"
-16,¿En el proyecto GPT4 que incidencias fueron cerradas durante agosto de 2023?,GPT4-14,"project = GPT4 AND status changed to Cerrado DURING ('2023-08-01', '2023-08-31')"
-17,Muestra todas las incidencias con alta prioridad en el proyecto GPT4,GPT4-20,priority = High and project = GPT4
-18,Dame una lista de las incidencias cuyo estado cambio en agosto de 2023 en el proyecto GPT4.,"GPT4-16,GPT4-15,GPT4-14,GPT4-13,GPT4-12,GPT4-11","status CHANGED DURING ('2023-08-01', '2023-08-31')"
-19,Encuentra todos los tickets con 'base de datos' en el resumen en el proyecto GPT4.,GPT4-20,summary ~ 'base de datos' and project = GPT4
-20,¿Cuántos tickets están resueltos en el proyecto GPT4?,"GPT4-13,GPT4-11",project = GPT4 AND status = Resuelto
-21,Muestra todas las incidencias reportadas por Alberto Aróstegui García en el proyecto GPT4,,reporter = 'Alberto Aróstegui García' and project = GPT4
-22,Muestra el progreso de la incidencia con el campo personalizado Custom_Id con valor GPT4-30,GPT4-23,Custom_Id ~ GPT4-30 and project = GPT4
-23,¿Cuáles son las incidencias creadas en agosto de 2023 en el proyecto GPT4?,"GPT4-30,GPT4-29,GPT4-28,GPT4-27,GPT4-26,GPT4-25,GPT4-24,GPT4-23,GPT4-22,GPT4-21,GPT4-20,GPT4-19,GPT4-18,GPT4-17,GPT4-16,GPT4-15,GPT4-14,GPT4-13,GPT4-12,GPT4-11","project = GPT4 AND created >= ""2023-08-01"" AND created <= 2023-08-31"
-24,¿Cuáles son las incidencias creadas en agosto de 2023 en el proyecto GPT4? Ordenalas de mayor a menor prioridad,"GPT4-30,GPT4-29,GPT4-28,GPT4-27,GPT4-26,GPT4-25,GPT4-24,GPT4-23,GPT4-22,GPT4-21,GPT4-20,GPT4-19,GPT4-18,GPT4-17,GPT4-16,GPT4-15,GPT4-14,GPT4-13,GPT4-12,GPT4-11","project = GPT4 AND created >= ""2023-08-01"" AND created <= ""2023-08-31"" ORDER BY priority DESC"
-25,¿Cuántos bugs se han reportado en el proyecto GPT4?,,issuetype = Bug and project = GPT4
-26,Dame todas las incidencias en la fase de 'Resuelto' del proyecto GPT4.,"GPT4-13,GPT4-11","project = GPT4 AND status = ""Resuelto"""
-27,Muéstrame todas las incidencias reabiertas en el proyecto GPT4,,status = Reabierto and project = GPT4
-28,"Muéstrame todas las incidencias con estado Reabierto"" en el proyecto GPT4",,status = Reabierto and project = GPT4
-29,Muestra todos los tickets que vencen en agosto de 2023 en el proyecto GPT4.,"GPT4-18,GPT-29","due >= ""2023-08-01"" AND due <= ""2023-08-31"""
-30,¿Qué tickets terminan después del 1 de septiembre de 2023 en el proyecto GPT4?,GPT4-25,"due > ""2023-09-01"" and project = GPT4"
-31,Encuentra todas las incidencias movidas a 'Validado' en agosto de 2023 en el proyecto GPT4,"GPT4-16,GPT4-12","status changed to Validado DURING ('2023-08-01', '2023-08-31')"
-32,Dame las incidencias resueltas en agosto de 2023 en el proyecto GPT4,"GPT4-16,GPT4-12,GPT4-13,GPT4-15","status changed to Resuelto DURING ('2023-08-01', '2023-08-31')"
-33,¿Cuántos tickets están en fase de 'En Progreso' en el proyecto GPT4?,"GPT4-27,GPT4-26,GPT4-23,GPT4-20,GPT4-19,GPT4-18,GPT4-17,GPT4-15",status = 'En progreso' and project = GPT4
-34,Lista todos los tickets creados en agosto de 2023 en el proyecto GPT4,"GPT4-30,GPT4-29,GPT4-28,GPT4-27,GPT4-26,GPT4-25,GPT4-24,GPT4-23,GPT4-22,GPT4-21,GPT4-20,GPT4-19,GPT4-18,GPT4-17,GPT4-16,GPT4-15,GPT4-14,GPT4-13,GPT4-12,GPT4-11","created >= ""2023-08-01"" AND created <= ""2023-08-31"" and project = GPT4"
-35,Muéstrame las incidencias abiertas más antiguas en el proyecto GPT4.,"GPT4-21,GPT4-22,GPT4-25,GPT4-28,GPT4-29,GPT4-30",status = Abierto and project = GPT4 ORDER BY created ASC
-36,"Muéstrame las incidencias con estado Abierto"" más antiguas en el proyecto GPT4.""","GPT4-21,GPT4-22,GPT4-25,GPT4-28,GPT4-29,GPT4-30","status = ""Abierto"" and project = GPT4 ORDER BY created ASC"
-37,Lista todos los tickets con la etiqueta 'seguridad' y dame un resumen en el proyecto GPT4.,GPT4-26,"labels = ""seguridad"" and project = GPT4"
-38,¿Cuántas incidencias se han movido a 'En progreso' en agosto de 2023 en el proyecto GPT4?,"GPT4-16,GPT4-15,GPT4-14,GPT4-13,GPT4-12,GPT4-11","project = GPT4 AND status changed to 'En progreso' DURING ('2023-08-01', '2023-08-31')"
-39,¿Cuáles son las incidencias de máxima prioridad asignadas a Alberto Aróstegui García en el proyecto GPT4?,GPT4-27,"project = GPT4 AND assignee = ""Alberto Aróstegui García"" AND priority = Highest"
-40,Lista todas las incidencias cerradas en agosto de 2023 en el proyecto GPT4,GPT4-14,"project = GPT4 AND status changed to Cerrado DURING ('2023-08-01', '2023-08-31')"
-41,¿Cuántas incidencias nuevas se han agregado al proyecto GPT4 en agosto de 2023?,"GPT4-30,GPT4-29,GPT4-28,GPT4-27,GPT4-26,GPT4-25,GPT4-24,GPT4-23,GPT4-22,GPT4-21,GPT4-20,GPT4-19,GPT4-18,GPT4-17,GPT4-16,GPT4-15,GPT4-14,GPT4-13,GPT4-12,GPT4-11","project = GPT4 AND created >= ""2023-08-01"" AND created <= ""2023-08-31"""
-42,Encuentra todas las incidencias con 'rendimiento' en su descripción en el proyecto GPT4.,GPT4-28,description ~ rendimiento
-43,Encuentra todos los tickets movidos a 'Cerrado' en agosto de 2023 en el proyecto GPT4.,GPT4-14,"status changed to Cerrado DURING ('2023-08-01', '2023-08-31')"
-44,Muestra todas las incidencias que están vencidas en el proyecto GPT4,"GPT4-29,GPT4-25,GPT4-18",due < now() and status != Cerrado and project = GPT4
-45,Lista todos los tickets en los que alguien ha votado en el proyecto GPT4.,GPT4-29,voter is not empty and project = GPT4
-46,¿Cuántas incidencias están en la fase 'Abierto' en el proyecto GPT4?,"GPT4-30,GPT4-29,GPT4-28,GPT4-25,GPT4-22,GPT4-21",project = GPT4 AND status = Abierto
-47,¿Cuántas incidencias están abiertas en el proyecto GPT4?,"GPT4-30,GPT4-29,GPT4-28,GPT4-25,GPT4-22,GPT4-21",project = GPT4 AND status = Abierto
-48,Recupera las incidencias que tengan que ver con Gitlab en el proyecto GPT4,GPT4-30,"summary ~ ""Gitlab"" OR description ~ ""Gitlab"" and project = GPT4" 
-49,Muestra las incidencias sin asignar en el proyecto GPT4,"GPT4-30,GPT4-29,GPT4-28,GPT4-26,GPT4-24,GPT4-23,GPT4-22,GPT4-20,GPT4-18,GPT4-17,GPT4-16,GPT4-15,GPT4-14,GPT4-13,GPT4-12,GPT4-11",project = GPT4 AND assignee is EMPTY
-50,Cuantas incidencias asignadas hay en el proyecto GPT4?,"GPT4-19,GPT4-21,GPT4-25,GPT4-27",project = GPT4 AND assignee is not EMPTY
-51,Muestrame las incidencias abiertas en GPT4,"GPT4-12,GPT4-15,GPT4-16,GPT4-17,GPT4-18,GPT4-19,GPT4-20,GPT4-21,GPT4-22,GPT4-23,GPT4-25,GPT4-26,GPT4-27,GPT4-28,GPT4-29,GPT4-30","status not in (Resuelto, Cerrado) and project = GPT4"
-52,Que incidencias de maxima prioridad en GPT4,GPT4-27,project = GPT4 and priority = Highest
-53,Selecciona las incidencias sin resolver de esta semana en GPT4,,created >= startOfWeek() and status != Resuelto and project = GPT4
-54,Muestra todas las incidencias con enlaces externos en GPT4,GPT4-18,attachments is not EMPTY and project = GPT4
-55,Selecciona las incidencias que vencen en los proximos 3 dias en GPT4,"GPT4-25,GPT4-18","due <= endOfDay(""+3d"") and status != Resuelto and project = GPT4"
-56,Muestra las incidencias en las que se esta trabajando ahora mismo en GPT4,"GPT4-15,GPT4-17,GPT4-18,GPT4-19,GPT4-20,GPT4-23,GPT4-26,GPT4-27","status = ""En Progreso"" and project = GPT4"
-57,Muestra las incidencias creadas esta semana en GPT4,,project = GPT4 and created >= startOfWeek()
-58,Muestra las incidencias creadas en los ultimos 7 dias en GPT4,,created >= -7d() and project = GPT4
-59,Muestrame las incidencias que vencen el 11 de agosto de 2023 en GPT4,GPT4-29,"due = ""2023-08-11"""
-60,Dame las incidencias del proyecto GPT4 que contengan etiquetas,"GPT4-25,GPT4-26",project = GPT4 and labels is not EMPTY
-61,Muestrame las incidencias asignadas a Alberto Aróstegui García que tengan etiquetas en GPT4,GPT4-25,"assignee = ""Alberto Aróstegui García"" and labels is not EMPTY AND project = GPT4"
-62,Dame las incidencias asignadas a mi en GPT4 que contengan enlaces externos,GPT4-19,assignee = currentUser() and attachments is not EMPTY and project = GPT4
-63,Dame las incidencias asignadas a mi en GPT4,"GPT4-19,GPT4-21,GPT4-25,GPT4-27",assignee = currentUser() and project = GPT4
-64,Muestrame las incidencias que estan en un sprint abierto,"MFM-87,MFM-86,MFM-85,MFM-84,MFM-83,MFM-82,MFM-81,MFM-80,MFM-79,MFM-78,MFM-75,MFM-74,MFM-73,MFM-72,MFM-71,MFM-70,MFM-69,MFM-68,MFM-67,MFM-66,MFM-65,MFM-64,MFM-63,MFM-62,MFM-61,MFM-60,MFM-59,MFM-58,MFM-57,MFM-56,MFM-55,MFM-54,MFM-53,MFM-52,MFM-51,MFM-50,MFM-49,MFM-47,MFM-46,MFM-45,MFM-44,MFM-43,MFM-42,MFM-41,MFM-39,MFM-38,MFM-37,MFM-36,MFM-34,MFM-33",sprint in openSprints()
-65,Que incidencias estan en un sprint ya cerrado,"MFM-39,MFM-38,MFM-37,MFM-36,MFM-34,MFM-33,MFM-32,MFM-30,MFM-27,MFM-26,MFM-22,MFM-21,MFM-20,MFM-18,MFM-16,MFM-15,MFM-13,MFM-12,MFM-11,MFM-4",sprint in closedSprints()
-66,¿Cuáles son los ítems que tienen una fecha de vencimiento entre el 1 de agosto de 2023 y el 31 de agosto de 2023 en GPT4?,"GPT4-18,GPT-29","due >= ""2023-08-01"" AND due <= ""2023-08-31"" and project = GPT4"
-67,¿En que proyectos ha votado al menos una persona?,GPT4-29,voter is not EMPTY
-68,¿Qué inicidencias tengo yo asignadas en GPT4?,"GPT4-19,GPT4-21,GPT4-25,GPT4-27",assignee = currentUser() and project = GPT4
-69,¿Qué incidencias están resueltas ahora mismo en GPT4?,"GPT4-13,GPT4-11","status = Resuelto and project = GPT4"
-70,¿Qué tickets se cerraron durante agosto de 2023?,"GPT4-14","status changed to Cerrado DURING ('2023-08-01', '2023-08-31')"
-71,¿Qué tickets cambiaron de estado durante agosto de 2023?,"GPT4-11,GPT4-12,GPT4-13,GPT4-14,GPT4-15,GPT4-16","status changed DURING ('2023-08-01', '2023-08-31')"
-72,¿Qué incidencias fueron creadas el último mes en GPT4?,"","created >= startOfMonth(-1) and project = GPT4"
-73,¿Cuántas incidencias en el proyecto GPT4 están cerradas pero no resueltas?,"GPT4-14,GPT4-24","status = Cerrado and status != Resuelto and project = GPT4"
+1,Muestra las incidencias en progreso,"INGURU-15,INGURU-17,INGURU-18,INGURU-19,INGURU-20,INGURU-23,INGURU-26,INGURU-27","status = ""En progreso""" 
+2,Muestra las incidencias en progreso y sus horas acumuladas,"INGURU-15,INGURU-17,INGURU-18,INGURU-19,INGURU-20,INGURU-23,INGURU-26,INGURU-27","status = ""En progreso"" "
+3,Muestra las incidencias que ya estan entregadas a cliente,INGURU-12,"status = ""Entregado""" 
+4,Muestra las incidencias que se han pasado de horas y por cuánto ,"INGURU-17",workratio > 100 
+5,Muestra las incidencias que deberían acabar en agosto de 2023  ,"INGURU-18,INGURU-29","due >= ""2023-08-01"" AND due <= ""2023-08-31"""
+6,Muestra las incidencias sin cerrar ni resolver ,"INGURU-12,INGURU-15,INGURU-16,INGURU-17,INGURU-18,INGURU-19,INGURU-20,INGURU-21,INGURU-22,INGURU-23,INGURU-25,INGURU-26,INGURU-27,INGURU-28,INGURU-29,INGURU-30","status not in (Resuelto, Cerrado) "
+7,Muestra quién tiene menos carga de trabajo en INGURU,"INGURU-30,INGURU-29,INGURU-28,INGURU-27,INGURU-26,INGURU-25,INGURU-24,INGURU-23,INGURU-22,INGURU-21,INGURU-20,INGURU-19,INGURU-18,INGURU-17,INGURU-16,INGURU-15,INGURU-14,INGURU-13,INGURU-12,INGURU-11","project = INGURU ORDER BY assignee ASC, updated DESC"
+8,Muestra quién tiene menos carga de trabajo en INGURU,"INGURU-30,INGURU-29,INGURU-28,INGURU-27,INGURU-26,INGURU-25,INGURU-24,INGURU-23,INGURU-22,INGURU-21,INGURU-20,INGURU-19,INGURU-18,INGURU-17,INGURU-16,INGURU-15,INGURU-14,INGURU-13,INGURU-12,INGURU-11","project = ""INGURU"""
+9,Cuántos tickets se han resuelto en agosto de 2023?,"INGURU-16,INGURU-15,INGURU-13,INGURU-12","status changed to Resuelto DURING ('2023-08-01', '2023-08-31')"
+10,Cuántos tickets se han resuelto en agosto de 2023 ?,"INGURU-16,INGURU-15,INGURU-13,INGURU-12"," status changed to Resuelto DURING ('2023-08-01', '2023-08-31')"
+11,Muéstrame todas las incidencias abiertas asignadas a Alberto Aróstegui García ,"INGURU-21,INGURU-25"," assignee = 'Alberto Aróstegui García' AND status = Abierto"
+12,Muéstrame todas las incidencias con estado Abierto asignadas a Alberto Aróstegui García ,"INGURU-21,INGURU-25", assignee = 'Alberto Aróstegui García' AND status = Abierto
+13,¿Cuántos tickets sin resolver hay  ?,"INGURU-30,INGURU-29,INGURU-28,INGURU-27,INGURU-26,INGURU-25,INGURU-24,INGURU-23,INGURU-22,INGURU-21,INGURU-20,INGURU-19,INGURU-18,INGURU-17,INGURU-16,INGURU-15,INGURU-14,INGURU-12", status != Resuelto
+14,Encuentra las incidencias asignadas a Alberto Aróstegui García  .,"INGURU-19,INGURU-21,INGURU-27", assignee = 'Alberto Aróstegui García'
+15,¿Cuántas incidencias se cerraron en agosto de 2023?,INGURU-14,"status changed to Cerrado DURING ('2023-08-01', '2023-08-31')"
+16,¿  que incidencias fueron cerradas durante agosto de 2023?,INGURU-14," status changed to Cerrado DURING ('2023-08-01', '2023-08-31')"
+17,Muestra todas las incidencias con alta prioridad  ,INGURU-20,priority = High 
+18,Dame una lista de las incidencias cuyo estado cambio en agosto de 2023  .,"INGURU-16,INGURU-15,INGURU-14,INGURU-13,INGURU-12,INGURU-11","status CHANGED DURING ('2023-08-01', '2023-08-31')"
+19,Encuentra todos los tickets con 'base de datos'  resumen  .,INGURU-20,summary ~ 'base de datos' 
+20,¿Cuántos tickets están resueltos  ?,"INGURU-13,INGURU-11", status = Resuelto
+21,Muestra todas las incidencias reportadas por Alberto Aróstegui García  ,,reporter = 'Alberto Aróstegui García' 
+22,Muestra el progreso de la incidencia con el campo personalizado Custom_Id con valor INGURU-30,INGURU-23,Custom_Id ~ INGURU-30 
+23,¿Cuáles son las incidencias creadas en agosto de 2023  ?,"INGURU-30,INGURU-29,INGURU-28,INGURU-27,INGURU-26,INGURU-25,INGURU-24,INGURU-23,INGURU-22,INGURU-21,INGURU-20,INGURU-19,INGURU-18,INGURU-17,INGURU-16,INGURU-15,INGURU-14,INGURU-13,INGURU-12,INGURU-11"," created >= ""2023-08-01"" AND created <= 2023-08-31"
+24,¿Cuáles son las incidencias creadas en agosto de 2023  ? Ordenalas de mayor a menor prioridad,"INGURU-30,INGURU-29,INGURU-28,INGURU-27,INGURU-26,INGURU-25,INGURU-24,INGURU-23,INGURU-22,INGURU-21,INGURU-20,INGURU-19,INGURU-18,INGURU-17,INGURU-16,INGURU-15,INGURU-14,INGURU-13,INGURU-12,INGURU-11"," created >= ""2023-08-01"" AND created <= ""2023-08-31"" ORDER BY priority DESC"
+25,¿Cuántos bugs se han reportado  ?,,issuetype = Bug 
+26,Dame todas las incidencias en la fase de 'Resuelto' del .,""," status = ""Resuelto"""
+27,Muéstrame todas las incidencias reabiertas  ,,status = Reabierto 
+28,"Muéstrame todas las incidencias con estado Reabierto""  ",,status = Reabierto 
+29,Muestra todos los tickets que vencen en agosto de 2023  .,"","due >= ""2023-08-01"" AND due <= ""2023-08-31"""
+30,¿Qué tickets terminan después del 1 de septiembre de 2023  ?,,"due > ""2023-09-01"" "
+31,Encuentra todas las incidencias movidas a 'Validado' en agosto de 2023  ,"","status changed to Validado DURING ('2023-08-01', '2023-08-31')"
+32,Dame las incidencias resueltas en agosto de 2023  ,"","status changed to Resuelto DURING ('2023-08-01', '2023-08-31')"
+33,¿Cuántos tickets están en fase de 'En Progreso'  ?,"",status = 'En progreso' 
+34,Lista todos los tickets creados en agosto de 2023  ,"","created >= ""2023-08-01"" AND created <= ""2023-08-31"" "
+35,Muéstrame las incidencias abiertas más antiguas  .,"",status = Abierto  ORDER BY created ASC
+36,"Muéstrame las incidencias con estado Abierto"" más antiguas  .""","","status = ""Abierto""  ORDER BY created ASC"
+37,Lista todos los tickets con la etiqueta 'seguridad' y dame un resumen  .,I,"labels = ""seguridad"" "
+38,¿Cuántas incidencias se han movido a 'En progreso' en agosto de 2023  ?,," status changed to 'En progreso' DURING ('2023-08-01', '2023-08-31')"
+39,¿Cuáles son las incidencias de máxima prioridad asignadas a Alberto Aróstegui García  ?,," assignee = ""Alberto Aróstegui García"" AND priority = Highest"
+40,Lista todas las incidencias cerradas en agosto de 2023  ,," status changed to Cerrado DURING ('2023-08-01', '2023-08-31')"
+41,¿Cuántas incidencias nuevas se han agregado al  en agosto de 2023?,," created >= ""2023-08-01"" AND created <= ""2023-08-31"""
+42,Encuentra todas las incidencias con 'rendimiento' en su descripción  .,,description ~ rendimiento
+43,Encuentra todos los tickets movidos a 'Cerrado' en agosto de 2023  .,4,"status changed to Cerrado DURING ('2023-08-01', '2023-08-31')"
+44,Muestra todas las incidencias que están vencidas  ,"",due < now() and status != Cerrado 
+45,Lista todos los tickets en los que alguien ha votado  .,,voter is not empty 
+46,¿Cuántas incidencias están en la fase 'Abierto'  ?,"", status = Abierto
+47,¿Cuántas incidencias están abiertas  ?,"1", status = Abierto
+48,Recupera las incidencias que tengan que ver con Gitlab  ,INGURU-30,"summary ~ ""Gitlab"" OR description ~ ""Gitlab"" " 
+49,Muestra las incidencias sin asignar  ,"", assignee is EMPTY
+50,Cuantas incidencias asignadas hay  ?,"", assignee is not EMPTY
+51,Muestrame las incidencias abiertas ,"","status not in (Resuelto, Cerrado) "
+52,Que incidencias de maxima prioridad ,INGURU-27, priority = Highest
+53,Selecciona las incidencias sin resolver de esta semana ,,created >= startOfWeek() and status != Resuelto 
+54,Muestra todas las incidencias con enlaces externos ,INGURU-18,attachments is not EMPTY 
+55,Selecciona las incidencias que vencen en los proximos 3 dias ,"INGURU-25,INGURU-18","due <= endOfDay(""+3d"") and status != Resuelto "
+56,Muestra las incidencias en las que se esta trabajando ahora mismo ,"","status = ""En Progreso"" "
+57,Muestra las incidencias creadas esta semana ,, created >= startOfWeek()
+58,Muestra las incidencias creadas en los ultimos 7 dias ,,created >= -7d() 
+59,Muestrame las incidencias que venc 11 de agosto de 2023 ,,"due = ""2023-08-11"""
+60,Dame las incidencias del  que contengan etiquetas,"", labels is not EMPTY
+61,Muestrame las incidencias asignadas a Alberto Aróstegui García que tengan etiquetas ,,"assignee = ""Alberto Aróstegui García"" and labels is not EMPTY "
+62,Dame las incidencias asignadas a mi  que contengan enlaces externos,,assignee = currentUser() and attachments is not EMPTY 
+63,Dame las incidencias asignadas a mi ,"",assignee = currentUser() 
+64,Muestrame las incidencias que estan en un sprint abierto,"",sprint in openSprints()
+65,Que incidencias estan en un sprint ya cerrado,"",sprint in closedSprints()
+66,¿Cuáles son los ítems que tienen una fecha de vencimiento entre el 1 de agosto de 2023 y el 31 de agosto de 2023 ?,"","due >= ""2023-08-01"" AND due <= ""2023-08-31"" "
+67,¿En que proyectos ha votado al menos una persona?,,voter is not EMPTY
+68,¿Qué inicidencias tengo yo asignadas ?,"",assignee = currentUser() 
+69,¿Qué incidencias están resueltas ahora mismo ?,"","status = Resuelto "
+70,¿Qué tickets se cerraron durante agosto de 2023?,"","status changed to Cerrado DURING ('2023-08-01', '2023-08-31')"
+71,¿Qué tickets cambiaron de estado durante agosto de 2023?,"","status changed DURING ('2023-08-01', '2023-08-31')"
+72,¿Qué incidencias fueron creadas el último mes ?,"","created >= startOfMonth(-1) "
+73,¿Cuántas incidencias   están cerradas pero no resueltas?,"","status = Cerrado and status != Resuelto "
 74,Muestrame las incidencias que se han movido a Resuelto en agosto de 2023,"","status changed to Resuelto DURING ('2023-08-01', '2023-08-31')"
 75,Dame las incidencias que han sido actualizadas en las ultimas 24 horas,"","updated >= -24h()"
-76,¿Que incidencias vencen hoy en MFM,"","due <= endOfDay() and project = MFM"
+76,¿Que incidencias vencen hoy ,"","due <= endOfDay() "
 77,Cuantas incidencias estan abiertas pero no asignadas?,"","status = Abierto and assignee is EMPTY"
-78,¿Qué incidencias fueron resueltas en los últimos 30 días en MFM?,"","status changed to Resuelto DURING ('-30d', now()) and project = MFM"
-79,¿Cuántas incidencias se han movido a 'En progreso' en los últimos 7 días en MFM?,"","status changed to 'En progreso' DURING ('-7d', now()) and project = MFM"
-80,¿Qué incidencias en MFM están en un sprint y no están asignadas?,"",sprint in openSprints() and assignee is EMPTY and project = MFM
+78,¿Qué incidencias fueron resueltas en los últimos 30 días ?,"","status changed to Resuelto DURING ('-30d', now()) "
+79,¿Cuántas incidencias se han movido a 'En progreso' en los últimos 7 días ?,"","status changed to 'En progreso' DURING ('-7d', now()) "
+80,¿Qué incidencias  están en un sprint y no están asignadas?,"",sprint in openSprints() and assignee is EMPTY 
 81,¿Que incidencias tienen enlaces externos?,"","attachments is not EMPTY"
-82,Lista todas las incidencias que contengan la palabra 'urgente' en MFM,"","summary ~ 'urgente' and project = MFM"
+82,Lista todas las incidencias que contengan la palabra 'urgente' ,"","summary ~ 'urgente' "
 83,Dame las incidencias de prioridad alta que todavia no estan asigndas,"","priority = High and assignee is EMPTY"
-84,Muestramen las incidencias cerradas el último trimestre en MFM,"","status changed to Cerrado DURING ('-3M', now()) and project = MFM"
+84,Muestramen las incidencias cerradas el último trimestre ,"","status changed to Cerrado DURING ('-3M', now()) "
 85,Dame las incidencias de baja prioridad que estan en progreso,"","priority = Low and status = 'En progreso'"
-86,Qué incidencias tienen un campo personalizado con valor 'GPT4-30'?,"","Custom_Id ~ GPT4-30"
-87,¿Cuántas incidencias se han creado en los últimos 7 días en MFM?,"","created >= -7d() and project = MFM"
-88,Muestra las incidencias del proyecto MFM que están marcadas como críticas y aún están abiertas,"","priority = Highest and status = Abierto and project = MFM"
+86,Qué incidencias tienen un campo personalizado con valor 'INGURU-30'?,"","Custom_Id ~ INGURU-30"
+87,¿Cuántas incidencias se han creado en los últimos 7 días ?,"","created >= -7d() "
+88,Muestra las incidencias del  que están marcadas como críticas y aún están abiertas,"","priority = Highest and status = Abierto "
 89,Dame las incidencias que han cambiado de prioridad,"","priority CHANGED"
-90,¿Cuántas incidencias relacionadas con fallos hay en MFM?,"","issuetype = Bug and project = MFM"
-91,Dame el total de horas registradas en las incidencias tipo Epic de MFM,"","issuetype = Epic and project = MFM"
+90,¿Cuántas incidencias relacionadas con fallos hay ?,"","issuetype = Bug "
+91,Dame el total de horas registradas en las incidencias tipo Epic de INGURU,"","issuetype = Epic "
 92,¿Qué incidencias están Resueltas pero aun no se han cerrado?,"","status = Resuelto and status != Cerrado"
-93,¿Cuántas incidencias se han creado en el último mes en MFM?,"","created >= startOfMonth(-1) and project = MFM"
-94,Dame las incidencias que han sido actualizadas en las últimas 24 horas en MFM,"","updated >= -24h() and project = MFM"
-95,¿Qué incidencias están ahora mismo validadas en MFM?,"","status = Validado and project = MFM"
-96,¿Cuántas incidencias se han movido a 'En progreso' en los últimos 7 días en MFM?,"","status changed to 'En progreso' DURING ('-7d', now()) and project = MFM"
-97,¿Qué incidencias en MFM están en un sprint y no están asignadas?,"",sprint in openSprints() and assignee is EMPTY and project = MFM
-98,¿Qué incidencias de baja prioridad están en progreso en MFM?,"","priority = Low and status = 'En progreso' and project = MFM"
-99,Dame las incidencias que han cambiado de prioridad en MFM,"","priority CHANGED and project = MFM"
-100,¿Cuántas incidencias relacionadas con fallos hay en GPT4?,"","issuetype = Bug and project = GPT4"
+93,¿Cuántas incidencias se han creado  último mes ?,"","created >= startOfMonth(-1) "
+94,Dame las incidencias que han sido actualizadas en las últimas 24 horas ,"","updated >= -24h() "
+95,¿Qué incidencias están ahora mismo validadas ?,"","status = Validado "
+96,¿Cuántas incidencias se han movido a 'En progreso' en los últimos 7 días ?,"","status changed to 'En progreso' DURING ('-7d', now()) "
+97,¿Qué incidencias  están en un sprint y no están asignadas?,"",sprint in openSprints() and assignee is EMPTY 
+98,¿Qué incidencias de baja prioridad están en progreso ?,"","priority = Low and status = 'En progreso' "
+99,Dame las incidencias que han cambiado de prioridad ,"","priority CHANGED "
+100,¿Cuántas incidencias relacionadas con fallos hay ?,"","issuetype = Bug "

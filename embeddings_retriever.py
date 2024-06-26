@@ -9,7 +9,7 @@ from langchain_core.output_parsers import StrOutputParser
 
 def embeddings_retriever(texto_pregunta):
 
-    local_model = "gpt-3.5-turbo"
+    local_model = "gpt-4o-2024-05-13"
     embeddings = OpenAIEmbeddings()
 
     db = Chroma(

@@ -23,7 +23,7 @@ ruta_preguntas = 'benchmark/ES_preguntas_train_V2.csv'
 ruta_resultados = f'benchmark/resultados/out_benchmark_ontology_{current_time}.csv'
 ruta_ontologia = 'JIRA_JQL_ontologia.ttl'
 ruta_json = 'json/ph.json'
-local_model = "gpt-3.5-turbo"
+local_model = "gpt-4o-2024-05-13"
 
 cont_preguntas = 0
 cont_fallos = 0
